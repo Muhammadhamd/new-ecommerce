@@ -164,7 +164,7 @@
         <div class="flex items-center"><div><h2 class="xl:text-3xl 2xl:text-4xl text-white font-semibold" id="boatName">Van Dutch 40</h2>
         </div>
         <div>
-            <button id="add-wishlist"></button>
+            <button id="add-wishlist"> <i class="fa fa-heart"></i> </button>
             
         </div>
     </div>
@@ -509,7 +509,7 @@ let data = '';
 async function renderpostdata(params) {
     const postId = window.location.pathname.split('/').pop();
     console.log(postId)
-axios.get(`/api/v1/postdata/${postId}`)
+axios.get(`/postdata/${postId}`)
 .then((res)=>{console.log(res)
 
    data = res.data
@@ -519,11 +519,11 @@ axios.get(`/api/v1/postdata/${postId}`)
    document.getElementById("description").innerHTML = data.description
    document.getElementById("boatimage-preview").innerHTML = ` <img src="/${data.boatimage}">`
    document.getElementById("price-div").innerHTML  =`
-   ${data.issale ? ` <h2 class="xl:text-3xl 2xl:text-4xl text-white font-semibold">$${data.totalPrice}</h2>
+   ${data.issale ? `<h2 class="xl:text-3xl 2xl:text-4xl text-white font-semibold">$${data.totalPrice}</h2>
         <h3 class="text-stone-50 text-2xl text-white font-semibold"> $${data.price}</h3>`
-        : ` <h2 class="xl:text-3xl 2xl:text-4xl text-white font-semibold">$${data.price}</h2>
-        `}
-   `
+        : ` <h2 class="xl:text-3xl 2xl:text-4xl text-white font-semibold">$${data.price}</h2>`
+    }`
+   
    let reviewdata;
    if(reviews && reviews.length > -1){
     reviews.map((review)=>{
@@ -551,7 +551,7 @@ document.getElementById("review-div").innerHTML = reviewdata
 
 async function checkwishlist(params) {
     const postId = window.location.pathname.split('/').pop();
-
+    console.log(postId)
     try {
     res = await axios.get(`/api/v1/check-post-is-in-wishlist/${postId}`)
     .then((res)=>{
@@ -561,7 +561,7 @@ async function checkwishlist(params) {
         : document.getElementById("add-wishlist").innerHTML = `<i class="text-xl text-white bg-red bi-heart ml-4"></i>`
     })
    } catch (error) {
-    
+    console.log(error)
    }
 }
 
@@ -606,8 +606,9 @@ renderpostdata()
 
 async function renderComments(){
     const postId = window.location.pathname.split('/').pop();
+    console.log(postId)
     try {
-        const res = await axios.post(`/api/v1/review/${postId}`,{
+        const res = await axios.post(`/review/${postId}`,{
             name:document.getElementById("comment-name").value,
             email:document.getElementById("comment-email").value,
             text:document.getElementById("comment-message").value,

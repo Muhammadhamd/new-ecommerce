@@ -100,7 +100,7 @@ const db = client.db("yacht"),
         const postid = req.params.id
         const wishlist = await listCol.findOne({ userId: CurrentuserId });
 
-        const matchItem = wishlist.wishListData.find((item) => item.postId.toString() === postid);
+        const matchItem = wishlist?.wishListData.find((item) => item.postId.toString() === postid);
 
         if (matchItem) {
           return res.json({'Added':true});

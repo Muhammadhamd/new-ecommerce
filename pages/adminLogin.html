@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body class="flex  justify-center ">
+    <form id="login" class='my-10 shadow-[0px_0px_5px_#00000042] rounded-md px-[50px] py-[20px] w-full max-w-[700px]'  >
+              
+        <div class="flex"> <h1 class='font-semibold text-4xl my-8'>Admin login <i className="fa fa-lock"></i></h1></div>       
+        <input class='my-[10px] w-full px-3 py-2 border-[3px] rounded-lg border-violet-300 outline-none' 
+        type="text" id="email" placeholder='Email..' />
+
+<input class='my-[10px] w-full px-3 py-2 border-[3px] rounded-lg border-violet-300 outline-none' 
+type="text" id="password" placeholder='Passworad..'
+     
+   />
+
+
+<button class="px-5 py-2 bg-violet-500 text-white font-semibold shadow rounded mt-[7px]">Login</button>
+
+  
+    </form>
+    <div className="text-center text-red font-semibold" >
+      
+    </div>
+    <script src="../assets/js/popupmessageshow.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.js"></script>
+
+    <script>
+         document.getElementById("login").addEventListener("submit",async(e)=>{
+            e.preventDefault()
+            let email =document.getElementById("email").value
+            let password =document.getElementById("password").value
+            console.log('etg')
+        axios.post("/api/v1/Admin-login",{
+        email:email,
+        password:password
+      })
+      .then((res)=>{
+          //  localStorage.setItem("Token", res.data)
+          console.log(res)
+          PopUpMessage(res.data)
+          window.location.href = "/admin"
+      })
+      .catch((e)=>{
+        PopUpMessage(e.response.data)
+
+        // setServerMessege(e)
+        console.log(e)
+      })
+     
+         })
+     
+    </script>
+</body>
+</html>

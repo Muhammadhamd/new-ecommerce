@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Single Product</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwindConfig.js"> </script>
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/animation.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/navbar.css">
+
+  <link rel="stylesheet" href="../assets/css/slider.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../assets/css/navslider.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Acme&family=Inter+Tight:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:ital,wght@1,500;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@700&family=Pacifico&family=Permanent+Marker&family=Playfair+Display:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Glitch&family=Ubuntu+Condensed&family=Ubuntu:wght@500&family=Work+Sans:ital,wght@0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+</head>
+
+<body 
+  class="bg-[#014d53] max:[1400px]:text-[16px] min-[1450px]:text-[17px] min-[1550px]:text-[18px] min-[1650px]:text-[19px] min-[1750px]:text-[20px] min-[1650px]:text-[19px] min-[1750px]:text-[20px] min-[1850px]:text-[21px] min-[1950px]:text-[22px] min-[2050px]:text-[23px] min-[2150px]:text-[24px] min-[2250px]:text-[25px] min-[2350px]:text-[26px] min-[2450px]:text-[26px] min-[2550px]:text-[27px] min-[2650px]:text-[28px] min-[2750px]:text-[29px] min-[2850px]:text-[30px] min-[2950px]:text-[31px] min-[3050px]:text-[32px] "id="singlepage">
+
+
+
+  <nav style="font-family: 'Urbanist';" class="text-[90%] font-[100]">
+    <!-- main menu  -->
+    <div class="main_menu">
+        <ul>
+            <li class="font-semibold" style="--i: 1"><span>
+                    <div></div>
+                </span> <a href=/home">Home</a>
+
+            </li>
+            <li><span>
+                    <div></div>
+                </span> <a href="/contact">Dealer info</a>
+                <div class="slide-show">
+                    <span class="w-full p-[2%] max-w-[50%] flex flex-col justify-center items-baseline"
+                        style="width: 100%; align-items: baseline;">
+                        <a class="text-base pt-[3%]" href="/about">About US</a>
+                        <a class="text-base pt-[3%]" href="/broker">why Use A Broker</a>
+                        <a class="text-base pt-[3%]" href="/howWeHelp">how we help</a>
+                        <a class="text-base pt-[3%]" href="/contact">Contact US</a>
+
+
+                    </span>
+                    <span class="w-full max-w-[50%]" style="width: 100%;">
+                        <img class="w-full h-full " style="width: 100%;"
+                            src="../assets/images/home/ship.png" alt="">
+                    </span>
+                </div>
+            </li>
+            <li style="--i: 2"><span>
+                    <div></div>
+                </span> <a href="/shop">boat for sale</a></li>
+            <li style="--i: 3"><span>
+                    <div></div>
+                </span> <a href="/sell-boat">Sale a boat</a></li>
+        </ul>
+        <div class="border border-[rgb(191_168_138)] w-[35%]" style="--i: 5">
+            <!-- middle logo  -->
+            <img src="../assets/images/shiplogo.png" class="w-[100%]">
+        </div>
+    </div>
+    <!-- large Screen menu  -->
+    <ul id="menu">
+        <li class="--i:6"><span>
+                <div></div>
+            </span> <a href="/services" style="">Service</a>
+            <div class="slide-show">
+                <span class="w-full p-[2%] max-w-[50%] flex flex-col justify-center items-baseline"
+                    style="width: 100%; align-items: baseline;">
+                    <a href="/service">Transporting
+                        And Shipping</a>
+                    <a href="/help">How we
+                        help</a>
+                </span>
+                <span class="w-full max-w-[50%]" style="width: 100%;">
+                    <img class="w-full" src="../assets/images/home/ship.png" alt="">
+                </span>
+            </div>
+        </li>
+
+        <li class="--i:7"><span>
+                <div></div>
+            </span> <a href="/did-you-know" style="">Did you know?</a>
+
+        </li>
+        <li style="--:8" class="text-[120%]"><span>
+                <div></div>
+            </span>
+            <a href="/wishlist"><i class="bi bi-heart"></i></a>
+        </li>
+        <li style="--i:9" class="text-[130%] mr-4"><span>
+                <div></div>
+            </span>
+            <a href=""><i class="bi bi-basket2"></i></a>
+        </li>
+        <a  href="/login"><button class="btn" id="loginbtn" style="--i:10">Login</button></a>
+    </ul>
+
+    <!-- drop down components  -->
+    <div class="menu">
+        <div class="toggle_btn">
+            <i class="bi bi-list"></i>
+        </div>
+        <div class="drop_down">
+            <li><a href="../home.html">Home</a></li>
+            <li><a href="../pages/contact.html">Dealer info</a></li>
+            <li><a href="../pages/shop.html">boat for sale</a></li>
+            <li><a href="../pages/sellpage.html">Sale a boat</a></li>
+
+            <li><a href="../pages/services.html">Service</a></li>
+            <li><a href="../pages/didyouknow.html">Did you know?</a></li>
+            <li>
+                <a href=""><i class="bi bi-heart"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="bi bi-trash"></i></a>
+            </li>
+            <li>
+                <button href="../index.html" class="btn" id="loginbtn">Login</button>
+            </li>
+        </div>
+        <button href="../index.html" class="btn">Login</button>
+    </div>
+</nav>
+<div class="owl-carousel owl-theme" id="thumbnailslider">
+<div id="boatimage-preview">
+ 
+    <img src="../assets/images/singlepage/NoPath.png">
+</div>
+
+</div>
+<section class="single-product-details mx-auto px-4 sm:px-20">
+    <div class="product-breadcrumbs ">
+     <ul class="flex list-none py-2 pt-3">
+       <li><a class="text-white capitalize">home ></a></li>  
+       <li><a class="text-white capitalize">boat for sale ></a></li>  
+       <li><a class="text-white capitalize">1983 Custom custom MAGIC SPIRIT134ft ></a></li>  
+     </ul>
+    </div>
+    <div class="flex justify-between mb-[10%] flex-col sm:flex-row">
+     <div class="product-details-left-col w-[100%] sm:w-[50%]"data-aos="slide-left">
+        <div class="flex items-center"><div><h2 class="xl:text-3xl 2xl:text-4xl text-white font-semibold" id="boatName">Van Dutch 40</h2>
+        </div>
+        <div>
+            <button id="add-wishlist"></button>
+            
+        </div>
+    </div>
+       <div class="flex w-[100%] justify-start">
+         <div class="product-rating flex w-[20%]">
+            <img src="../assets/images/singlepage/icons8-star-30 (1).png"class="w-[4.5%]">
+            <img src="../assets/images/singlepage/icons8-star-30 (1).png"class="w-[4.5%]">
+            <img src="../assets/images/singlepage/icons8-star-30 (1).png"class="w-[4.5%]">
+            <img src="../assets/images/singlepage/icons8-star-30 (1).png"class="w-[4.5%]">
+            <img src="../assets/images/singlepage/icons8-star-30 (1).png"class="w-[4.5%]">
+         </div>
+         <div class="w-[10%]">
+            <p class="text-white">45</p>
+         </div>
+         <div class="w-[70%]">
+            <p class="text-white">2023</p>
+         </div>
+       </div>
+       <div class="flex justify-between w-[45%]">
+           <p class="text-white">40FT.</p>
+           <p class="text-white">10 occupancy</p>
+           <p class="text-white">no captain</p>
+       </div>
+       <div class="product-btns py-5">
+          <a class="text-white capitalize px-12 py-2 rounded  bg-[#BFA888] text-white">buy now</a>
+          <a class="text-black capitalize px-12 py-2 mx-3 rounded bg-white color-[#014D53]">get a quote</a>
+       </div>
+     </div>
+     <div  class="product-details-right-col w-[100%] sm:w-[30%]"data-aos="slide-right" >
+        <div id="price-div">
+           
+        </div>
+        <button class="text-white bg-[#BFA888] flex items-center capitalize px-3 py-2 mt-3 rounded " id="tour-req-btn"><img src="../assets/images/singlepage/icons8-briefcase-30.png" class="w-[12%] mx-2" > request to tour</button>
+     </div>
+   </div>
+
+
+   <div class="p-[3%] shadow-[0px_0px_5px_#00000099] max-w-[95%] m-auto my-[5%]"data-aos="fade-up">
+    <div class="tabs border border-solid p-4">
+        <ul id="tabs-nav">
+          <li><a class="text-white uppercase text-base" href="#tab1">Description
+        </a></li>
+          <li class="pl-2"><a class="text-white uppercase text-base" href="#tab2">Reviews</a></li>
+
+        </ul> <!-- END tabs-nav -->
+        <div id="tabs-content">
+          <div id="tab1" class="tab-content p-4" style="background-color: #013F44;">
+            <!-- <h5 class="text-white">1983 Custom</h5>
+            <p class="text-white">!!!! REDUCED BY $200,000.00 !!!! Motivated Seller !!! BRING ALL </p>
+            <p class="text-white">MAGIC SPIRIT</p>
+            <h3 class="text-white xl:text-2xl 2xl:text-3xl pt-4 py-2 ">AMERICAN MADE HULL – CAN CHARTER IN </h3>
+            <p class="text-white text-sm lg:text-base 2xl:text-lg pt-2 pb-8">Magic Spirit’ is the mother ship of her fleet, …consisting of 4 yachts varying in size that make up (Magic Yacht Charters) ‘MagicSpirit’ has an LOA of 133′ spread out across three decks, The 
+                largest Carter “SHIP” currently on the west coast of Canada. She easily accommodate a large crowd totalling a whopping 415 persons at capacity, with dinning accommodations for 350 
+                guests. a total of 4 Heads (bathrooms) (2Men) (2Ladies) A very large commercial grade gally & appliances. Each level is Bar station equipped, Her top ‘Open’ deck is 3000sqft. & equipped 
+                with a Bar station, Fridge & removable shelter top.. currently undergoing a fresh paint job.</p>
+                <h6 class="text-white text-sm lg:text-base 2xl:text-lg pb-4">A 2020 survey on file (condition& Value )</h6>
+                <p class="text-white text-sm lg:text-base 2xl:text-lg pb-6">The Vancouver, BC based business (MAGIC YACHT CHARTERS) is also available should one wish to take over a well established, long standing Charter operation. (20 years strong) Located In the Heart of Vancouver in the (Westin Bayshore Marina) just off the Very popular Seawall & next to Coal Harbour Marina. Moored in a very desirable locations she rests just in front of the ver</p>
+                <h6 class="text-white text-sm lg:text-base 2xl:text-lg pb-3"> Google rating of 4.3 out of 5 start</h6>
+                <p class="text-white text-sm lg:text-base 2xl:text-lg pb-4">(Website Quote) </p>
+                <p class="text-white text-sm lg:text-base 2xl:text-lg pb-3">
+                    Magic Yacht Charters’ fleet is spectacularly located at the Westin Bayshore Marina in Coal Harbour; and all four of the yachts are uniquely suited to hosting an event that leaves a lasting impression, be it for business or pleasure.
+                    </p> -->
+                    <p class="text-white text-sm lg:text-base 2xl:text-lg pb-3" id="description"></p>
+          </div>
+        
+          <div id="tab2" class="tab-content p-4">
+            <div class="flex flex-col sm:flex-row justify-between">
+             <div class="w-[100%] sm:w-[45%]">
+                <h3 class="text-white text-base md:text-lg lg:text-xl pt-4 py-2  uppercase">Reviews</h3>
+                <p class="text-white text-base pt-3">These are(328)</p>
+
+                <div id="review-div"></div>
+             </div>
+             
+                <form id="add-new-review" class="w-[100%] sm:w-[45%]">
+                    <p class="text-white text-base md:text-lg 2xl:text-xl pt-2 py-2  capitalize">Give review
+                    </p>
+                    <p class="text-white text-base md:text-lg 2xl:text-xl pt-2 py-2  capitalize">Your email address will not be published. Required fields are marked *
+                    </p>
+                    <p class="text-white text-base md:text-lg 2xl:text-xl pt-2 py-2  capitalize">Your review *
+                    </p>
+                    <textarea class="w-full bg-transparent border border-solid h-[120px] rounded" id="comment-message">
+    
+                    </textarea>
+                    <div class="flex"> 
+                      <div class="flex flex-col">
+                        <label class="text-base text-white">Name*</label>
+                        <input type="text" id="comment-name" name="name"class="w-full bg-transparent border border-solid h-[35px] rounded">
+                      </div>  
+                      <div class="flex flex-col mx-[0] sm:mx-[1.5%]">
+                        <label class="text-base text-white">Email*</label>
+                        <input type="email"name="email" id="comment-email" class=" w-full bg-transparent border border-solid h-[35px] rounded">
+                      </div>
+                    </div>
+                    <div class="flex"> <input type="checkbox" id="save-name-email-local"><p class="text-white text-base md:text-lg 2xl:text-xl pt-2 py-2  capitalize">Save my name, email, and website in this browser for the next 
+                        time I comment.
+                    </p></div>
+                    <input type="submit" value="submit" class=" px-8 rounded py-2 bg-[#BFA888] uppercase text-base text-white"> 
+                 </form>
+            </div>
+           
+          </div>
+        
+         
+        </div> <!-- END tabs-content -->
+      </div> <!-- END tabs -->
+   </div>
+  </section>
+
+
+
+
+<!--featured items-->
+<section class="max-w-[90%] m-auto">
+  <div class="flex justify-between ">
+     <h2 class="text-2xl lg:text-3xl 2xl:text-4xl text-white ">Related Items</h2>
+     <a href="#" class="text-white capitalize text-base sm:text-lg 2xl:text-xl">see more</a>
+  </div>
+  <div class="flex justify-between py-3 flex-col sm:flex-row">
+    <div style="font-family: 'Urbanist';"
+    class="featured-yacht-div relative w-[100%] sm:w-[23%] border text-[#E8E8E8]">
+    <div class="for-sale-box bg-[#ffffff] top-[20px] right-[20px] px-[12px] py-[3px] rounded absolute "><p class="capitalize ">For sale</p></div>
+    <div class="  border-b-2">
+        <div class="m-2">
+            <img src="../assets/images/home/featured-yacht2.png" alt="" class="w-full">
+        </div>
+        <h1 class="text-2xl ml-2 mb-3">
+            North Castle Product Name
+        </h1>
+        <p class="text-slate-200 text-base ml-2 mb-3">15 Guest . 12 Beds . 5 Cabins . 1 Bathrooms
+        </p>
+    </div>
+    <div class="p-2 flex justify-between">
+        <div class="flex">
+            <h1 style="text-decoration: line-through;"
+                class="tracking-[0.05rem]  text-base ml-2 font-[100]">$7,000,00</h1>
+            <h1 class="text-base ml-2 font-semibold tracking-[0.05rem]"> $6,000,00</h1>
+        </div>
+        <div>
+            <h1 class="font-[100]">45 <i class="fa fa-star"></i></h1>
+        </div>
+    </div>
+    </div>
+    <div style="font-family: 'Urbanist';"
+    class="featured-yacht-div relative w-[100%] sm:w-[23%] border text-[#E8E8E8]">
+    <div class="for-sale-box bg-[#ffffff] top-[20px] right-[20px] px-[12px] py-[3px] rounded absolute "><p class="capitalize ">For sale</p></div>
+    <div class="  border-b-2">
+        <div class="m-2">
+            <img src="../assets/images/home/featured-yacht1.png" alt="" class="w-full">
+        </div>
+        <h1 class="text-2xl ml-2 mb-3">
+            North Castle Product Name
+        </h1>
+        <p class="text-slate-200 text-base ml-2 mb-3">15 Guest . 12 Beds . 5 Cabins . 1 Bathrooms
+        </p>
+    </div>
+    <div class="p-2 flex justify-between">
+        <div class="flex">
+            <h1 style="text-decoration: line-through;"
+                class="tracking-[0.05rem]  text-base ml-2 font-[100]">$7,000,00</h1>
+            <h1 class="text-base ml-2 font-semibold tracking-[0.05rem]"> $6,000,00</h1>
+        </div>
+        <div>
+            <h1 class="font-[100]">45 <i class="fa fa-star"></i></h1>
+        </div>
+    </div>
+    </div>
+    <div style="font-family: 'Urbanist';"
+    class="featured-yacht-div relative w-[100%] sm:w-[23%] border text-[#E8E8E8]">
+    <div class="for-sale-box bg-[#ffffff] top-[20px] right-[20px] px-[12px] py-[3px] rounded absolute "><p class="capitalize ">For sale</p></div>
+    <div class="  border-b-2">
+        <div class="m-2">
+            <img src="../assets/images/home/featured-yacht3.png" alt="" class="w-full">
+        </div>
+        <h1 class="text-2xl ml-2 mb-3">
+            North Castle Product Name
+        </h1>
+        <p class="text-slate-200 text-base ml-2 mb-3">15 Guest . 12 Beds . 5 Cabins . 1 Bathrooms
+        </p>
+    </div>
+    <div class="p-2 flex justify-between">
+        <div class="flex">
+            <h1 style="text-decoration: line-through;"
+                class="tracking-[0.05rem]  text-base ml-2 font-[100]">$7,000,00</h1>
+            <h1 class="text-base ml-2 font-semibold tracking-[0.05rem]"> $6,000,00</h1>
+        </div>
+        <div>
+            <h1 class="font-[100]">45 <i class="fa fa-star"></i></h1>
+        </div>
+    </div>
+    </div>
+    <div style="font-family: 'Urbanist';"
+    class="featured-yacht-div relative w-[100%] sm:w-[23%] border text-[#E8E8E8]">
+    <div class="for-sale-box bg-[#ffffff] top-[20px] right-[20px] px-[12px] py-[3px] rounded absolute "><p class="capitalize ">For sale</p></div>
+    <div class="  border-b-2">
+        <div class="m-2">
+            <img src="../assets/images/home/featured-yacht3.png" alt="" class="w-full">
+        </div>
+        <h1 class="text-2xl ml-2 mb-3">
+            North Castle Product Name
+        </h1>
+        <p class="text-slate-200 text-base ml-2 mb-3">15 Guest . 12 Beds . 5 Cabins . 1 Bathrooms
+        </p>
+    </div>
+    <div class="p-2 flex justify-between">
+        <div class="flex">
+            <h1 style="text-decoration: line-through;"
+                class="tracking-[0.05rem]  text-base ml-2 font-[100]">$7,000,00</h1>
+            <h1 class="text-base ml-2 font-semibold tracking-[0.05rem]"> $6,000,00</h1>
+        </div>
+        <div>
+            <h1 class="font-[100]">45 <i class="fa fa-star"></i></h1>
+        </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <footer class="text-white ">
+    <div style="background-image: linear-gradient(360deg , #112F42, #9a030000 25%) , linear-gradient(#014d53, #9a030000 25%) , url('../assets/images/footer-bg.jpg'); background-size: cover;"
+        class="py-[3%] w-full  p-4 md:pb-[8%] md:pt-[6%]">
+        <div class="sm:flex sm:items-center sm:justify-between md:px-[3%] items-flex-start"
+            style="align-items: flex-start;">
+            <div class="max-w-[20%] border md:mr-[7%]">
+                <img src="../assets/images/footer-logo.png" class="w-[90%]"
+                    alt="logo" />
+            </div>
+
+            <div class="flex flex-wrap gap-[50px] w-full justify-between">
+                <ul class="flex flex-col items-start text-[17px] font-[100]">
+                    <h1 class="text-[23px] ">Other links</h1>
+                    <li>
+                        <a href="home.html" class="hover:underline md:">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class=" hover:underline md: ">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="hover:underline">Contact</a>
+                    </li>
+                    <li>
+                        <a href="howWeHelp.html" class=" hover:underline md: ">How we help</a>
+                    </li>
+
+                    <li>
+                        <a href="didyouknow.html" class="hover:underline">Did you know</a>
+                    </li>
+                </ul>
+                <ul class="flex flex-col items-start text-[17px] font-[100]">
+                    <h1 class="text-[23px] "> Other links</h1>
+                    <li>
+                        <a href="shop.html" class=" hover:underline md: ">Boats for Sale</a>
+                    </li>
+                    <li>
+                        <a href="sellpage.html" class="hover:underline md:">Sell a Boat</a>
+                    </li>
+                    <li>
+                        <a href="braker.html" class=" hover:underline md: ">Why use a Broker?</a>
+                    </li>
+                    <li>
+                        <a href="" class="hover:underline">Financing</a>
+                    </li>
+                </ul>
+                <ul class="flex flex-col items-start text-[17px] font-[100]">
+                    <h1 class="text-[23px] ">Contact Information</h1>
+                    <li>
+                        <a href="#" class=" hover:underline md: ">102 Lakeshore Rd E, Mississauga,
+                            ON L5G 1E3, Canada</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline md:">justin.ramirez@mail.com</a>
+                    </li>
+                    <li>
+                        <a href="#" class=" hover:underline md: ">(268)013-4757</a>
+                    </li>
+                    <li class="flex mt-2">
+
+
+
+                        <a href=""><img
+                                class="transition ease-in-out delay-40 w-[70%] hover:scale-[1.3] duration-[.3s]"
+                                src="../assets/images/icons/facebook.png" alt=""></a>
+
+
+                        <a href=""><img
+                                class=" transition ease-in-out delay-40 w-[70%] hover:scale-[1.3] duration-[.3s]"
+                                src="../assets/images/icons/twitter.png" alt=""></a>
+
+
+                        <a href=""><img
+                                class="transition ease-in-out delay-40 w-[70%] hover:scale-[1.3] duration-[.3s]"
+                                src="../assets/images/icons/instagram.png" alt=""></a>
+
+                </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class='bg-[#112F42] py-2'>
+            <hr class="border-[#BFA888] sm:mx-auto dark:border-gray-700 " />
+            <span class="block text-base text-white py-[1%] text-center ">© 2023 <a href="#"
+                    class="hover:underline">Yacht™</a>. All Rights Reserved.</span>
+        </div>
+
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.js"></script>
+				
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="../assets/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+<script type="text/javascript">
+    function showLoader(image){
+$.LoadingOverlay("show",{
+background  : "#e5e7eb",
+image       : "../assets/images/logo.png",
+progress    : true,
+fontawesome : "fa fa-cog fa-spin",
+text        : "Yacht Master INC.",
+textAnimation  : "pulse"
+});
+
+// Hide it after 3 seconds
+setTimeout(function(){
+$.LoadingOverlay("hide");
+}, 4500);
+}
+let data = '';
+
+async function renderpostdata(params) {
+    const postId = window.location.pathname.split('/').pop();
+    console.log(postId)
+axios.get(`/api/v1/postdata/${postId}`)
+.then((res)=>{console.log(res)
+
+   data = res.data
+
+   let reviews = data.reviews
+   document.getElementById("boatName").innerHTML = data.boatName
+   document.getElementById("description").innerHTML = data.description
+   document.getElementById("boatimage-preview").innerHTML = ` <img src="/${data.boatimage}">`
+   document.getElementById("price-div").innerHTML  =`
+   ${data.issale ? ` <h2 class="xl:text-3xl 2xl:text-4xl text-white font-semibold">$${data.totalPrice}</h2>
+        <h3 class="text-stone-50 text-2xl text-white font-semibold"> $${data.price}</h3>`
+        : ` <h2 class="xl:text-3xl 2xl:text-4xl text-white font-semibold">$${data.price}</h2>
+        `}
+   `
+   let reviewdata;
+   if(reviews && reviews.length > -1){
+    reviews.map((review)=>{
+
+reviewdata += ` <div class="mb-4 border border-solid rounded  p-2.5">
+                <p class="text-white text-base md:text-lg lg:text-xl pt-2 py-2  capitalize">${review.name}</p>
+                <div class="flex">
+                    <img src="../assets/images/singlepage/icons8-star-30.png"class="w-[4.5%]">
+                    <img src="../assets/images/singlepage/icons8-star-30.png"class="w-[4.5%]">
+                    <img src="../assets/images/singlepage/icons8-star-30.png"class="w-[4.5%]">
+                    <img src="../assets/images/singlepage/icons8-star-30.png"class="w-[4.5%]">
+                    <img src="../assets/images/singlepage/icons8-star-30.png"class="w-[4.5%]">
+                </div>
+                <p class="text-white text-base md:text-lg 2xl:text-xl pt-4 py-2  capitalize">${review.text}</p>
+            </div>`
+
+})
+document.getElementById("review-div").innerHTML = reviewdata
+
+   }
+ 
+})
+.catch((e)=>console.log(e))
+}
+
+async function checkwishlist(params) {
+    const postId = window.location.pathname.split('/').pop();
+
+    try {
+    res = await axios.get(`/api/v1/check-post-is-in-wishlist/${postId}`)
+    .then((res)=>{
+        console.log(res.data.Added)
+        const isIn = res.data.Added
+        isIn ? document.getElementById("add-wishlist").innerHTML = `<i class="text-xl text-red bi-heart-fill ml-4"></i>`
+        : document.getElementById("add-wishlist").innerHTML = `<i class="text-xl text-white bg-red bi-heart ml-4"></i>`
+    })
+   } catch (error) {
+    
+   }
+}
+
+document.getElementById("tour-req-btn").addEventListener("click",(e)=>{
+console.log('vl')
+console.log("data",data)
+
+    axios.post("/api/v1/request-tour",{
+        data
+    })
+    .then((res)=>{
+        console.log(res)
+    })
+    .catch((e)=>{
+        console.log(e)
+    })
+})
+
+
+document.getElementById("add-wishlist").addEventListener("click",async(e)=>{
+    const postId = window.location.pathname.split('/').pop();
+   try {
+    const res = await axios.post('/api/v1/add-wishlist',{
+        postid:postId
+    })
+    console.log(res.data)
+        checkwishlist()
+
+   } catch (error) {
+    console.log(error)
+   }
+ 
+})
+document.addEventListener("DOMContentLoaded",()=>{
+renderpostdata()
+        checkwishlist()
+
+
+})
+
+
+
+async function renderComments(){
+    const postId = window.location.pathname.split('/').pop();
+    try {
+        const res = await axios.post(`/api/v1/review/${postId}`,{
+            name:document.getElementById("comment-name").value,
+            email:document.getElementById("comment-email").value,
+            text:document.getElementById("comment-message").value,
+        })
+        .then(()=>{
+            renderpostdata()
+        })
+        console.log(res.data)
+    } catch (error) {
+        console.log("error",error)
+    }
+}
+document.getElementById("add-new-review").addEventListener("submit",async(e)=>{
+    e.preventDefault()
+  renderComments()
+  
+})
+</script>
+</body>
+
+</html>

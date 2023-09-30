@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        /* Dark theme CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: #fff;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #292929;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+        <button id="logout">logout</button>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Tour Requests</h2>
+            <table id="tour-req">
+                <tr>
+                    <th>Request Date</th>
+                    <th>Status</th>
+                    <th>Message</th>
+                </tr>
+                <!-- Sample tour request data -->
+                
+        
+                <!-- Add more tour request rows as needed -->
+            </table>
+        </section>
+        <section>
+            <h2>Visit Requests</h2>
+            <table id="visit-req">
+                <tr>
+                    <th>Request Date</th>
+                    <th>Status</th>
+                    <th>Message</th>
+                </tr>
+                <!-- Sample visit request data -->
+                
+                <!-- Add more visit request rows as needed -->
+            </table>
+        </section>
+        <section>
+            <h2>Quote Requests</h2>
+            <table>
+                <tr>
+                    <th>Request Date</th>
+                    <th>Status</th>
+                </tr>
+                <!-- Sample quote request data -->
+                <tr>
+                    <td>2023-09-25</td>
+                    <td>Processing</td>
+                </tr>
+                <!-- Add more quote request rows as needed -->
+            </table>
+        </section>
+        <section>
+            <h2>Sales</h2>
+            <!-- Display sales information here -->
+        </section>
+    </div>
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/js/popupmessageshow.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded",async()=>{
+            try {
+         const res = await axios.get("/api/v1/visit-requests-currentuser")
+         console.log(res.data)
+         let data  = res.data
+         let div =''
+         data.map((each)=>{
+            div += `<tr>
+                    <td>${each.timeStamp}</td>
+                    <td>${each.status}</td>
+                    <td>${each.message}</td>
+                </tr>`
+         })
+         document.getElementById("visit-req").innerHTML += div
+        } catch (error) {
+         console.log(error.response.data)
+            
+        }
+        try {
+         const res = await axios.get("/api/v1/tour-requests-currentuser")
+         console.log(res.data)
+         let data  = res.data
+         let div =''
+         data.map((each)=>{
+            div += `<tr>
+                    <td>${each.timeStamp}</td>
+                    <td>${each.status}</td>
+                    <td>${each.Data.data.inserting_post.boatName}</td>
+                </tr>`
+         })
+         document.getElementById("tour-req").innerHTML += div
+
+        } catch (error) {
+         console.log(error.response.data)
+            
+        }
+        try {
+         const res = await axios.get("/api/v1/quote-requests-currentuser")
+         console.log(res.data)
+        } catch (error) {
+         console.log(error.response.data)
+            
+        }
+        })
+
+        document.getElementById("logout").addEventListener("click",async (e)=>{
+
+            try {
+        const res = await axios.post("/api/v1/logout")
+                .then((res)=>{
+            PopUpMessage(res.data)
+
+                })
+            } catch (error) {
+            PopUpMessage(error.response.data)
+                
+            }
+        })
+       
+    </script>
+</body>
+</html>

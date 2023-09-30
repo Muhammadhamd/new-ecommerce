@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div  style="background-image: url(./assets/images/slashscreen/banner.jpg); background-size: cover;" class="py-[2.44%] px-[5%] text-white" >
+       
+        <div class="border-2 mb-8 border-[#BFA888] flex flex-col items-center justify-center h-[84vh]">
+            <div class="max-w-[34%]">
+                <img src="./assets/images/logo.png" class="w-full" alt="">
+            </div>
+            <h1 class="text-[130%] font-[500]">Welcome to Yacht Master Incorporated </h1>
+            <h3 class="text-[130%] font-[500]">Power Boats & Luxury Motor Yachts</h3>
+            <button class="bg-white px-[2%] py-[.5%] mt-3 rounded shadow text-black hover:bg-[#BFA888]  hover:text-white"><a href="./home.html">Lets Start</a></button>
+        </div>
+    </div>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+<script type="text/javascript">
+    function showLoader(){
+$.LoadingOverlay("show",{
+background  : "#e5e7eb",
+image       : "../assets/images/logo.png",
+progress    : true,
+fontawesome : "fa fa-cog fa-spin",
+text        : "Yacht Master INC.",
+textAnimation  : "pulse"
+});
+
+// Hide it after 3 seconds
+setTimeout(function(){
+$.LoadingOverlay("hide");
+}, 4500);
+}
+</script>
+</html>

@@ -1,0 +1,35 @@
+.leftanimate{
+    animation: slideleft 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+    }
+    @keyframes slideleft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+nav  ul li , nav .main_menu div {
+    opacity: 0;
+}
+nav  ul li , nav .main_menu div {
+    transition:.3s ;
+    animation: slidetop .5s ease forwards;
+     opacity: 0;
+    animation-delay: calc(.2s * var(--i));
+}
+
+@keyframes slidetop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

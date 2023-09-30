@@ -1,0 +1,33 @@
+nav ul li {
+  font-weight: 300;
+}
+ul li .slide-show{
+    width: 330px;
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 30px;
+    border: none;
+    /* border-radius: 5px; */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.452);
+    overflow: hidden;
+    transition: ease 0.4s;
+    padding: 6px;
+    display: none;
+
+}
+  ul li .slide-show span{
+   
+    color: black;
+    width: 100%;
+    /* display: none; */
+}
+ ul li:hover .slide-show{
+  transition: ease 0.4s;
+
+    display: flex;
+
+}
+ul li .slide-show span a{
+  font-weight: 900;
+}

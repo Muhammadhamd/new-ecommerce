@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribed Users</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Dark mode styles */
+        body.dark {
+            background-color: #1a202c;
+            color: #cbd5e0;
+        }
+        .dark-bg {
+            background-color: #2d3748;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <div class="min-h-screen flex flex-col justify-center items-center">
+        <h1 class="text-3xl font-semibold mb-6 text-white">Subscribed Users</h1>
+
+        <div  class="rounded-lg shadow-md w-full lg:w-2/3" id="email-div">
+            <!-- Subscriber 1 -->
+            
+
+            <!-- Add more subscribers here -->
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+
+        async function renderrequests() {
+            try {
+               const res = await axios.get('/api/v1/subscribers')
+                .then((res)=>{console.log(res.data)
+                let data = res.data,
+                    div='';
+
+                    data.map((sub , index)=>{
+
+                        div += `
+                        <div class="p-4 border-b dark-bg text-white">
+                <h2 class="text-lg font-semibold">User ${index + 1}</h2>
+                <p class="mt-2">Email:${sub.email}</p>
+                <button onclick="removeSubscriber('${sub._id}')">remove</button>
+            </div>
+                        `
+                    })
+                    document.getElementById("email-div").innerHTML = div
+                
+                })
+                .catch((res)=>console.log(res))
+            } catch (error) {
+                consoole.log(error)
+            }
+        }
+        document.addEventListener("DOMContentLoaded", async () => {
+           
+           renderrequests()
+        });
+
+        async function removeSubscriber(id){
+
+            axios.delete(`/api/v1/subscriber/${id}`)
+            .then((res)=>{console.log(res)
+           renderrequests()
+            })
+            .catch((e)=>{console.log(e)})
+        }
+    </script>
+</body>
+</html>

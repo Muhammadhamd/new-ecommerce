@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Requests</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class=" font-sans" style="background-color: #014d53;">
+    <div class="min-h-screen flex flex-col justify-center items-center">
+        <h1 class="text-3xl font-semibold mb-6 text-white" >Visit Requests</h1>
+
+        <div class=" rounded-lg shadow-md w-full lg:w-2/3" id="req-div">
+            <!-- Request 1 -->
+        
+           
+        </div>
+    </div>
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.js"></script>
+ <script src="https://cdn.tailwindcss.com"></script>
+
+
+ <script>
+    async function renderrequests(){
+        try {
+            const res = await axios.get("/api/v1/visite-requests")
+            let data = res.data
+            let div = ''
+
+            data.map((each)=>{
+                div += `  <div class="p-4 border-b dark-bg text-white" >
+                <div class="flex justify-between items-center">
+                    <h2 class="text-lg font-semibold ">${each.name}</h2>
+                    <span class="">${each.email}</span>
+                </div>
+                <p class="mt-2">${each.phoneNumber}</p>
+                <p class="mt-2">Date to Visit: ${each.dateToVisit}</p>
+                <p class="mt-2">Time to Visit:${each.timeToVisit}</p>
+                <p class="mt-2 text-gray-500">Requested on: ${each.timeStamp}</p>
+                <div>
+                    <p class="mt-2 font-bold text-blue-600">Status: ${each.status}</p>
+                    <div>
+                        ${
+                            each.status === "pending" ?` <button onclick="SetStatusAprove('${each._id}')">Aprove</button>
+                        <button onclick="SetStatusdecline('${each._id}')">decline</button>` : ''
+                        }
+                    </div>
+                </div>
+                <p class="mt-2">${each.message}</p>
+            </div>
+          
+`
+            })
+
+            document.getElementById("req-div").innerHTML = div
+            console.log(data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    document.addEventListener("DOMContentLoaded",async()=>{
+
+      renderrequests()
+    })
+
+
+    async function SetStatusAprove(id) {
+            try {
+                const res = await axios.put(`/api/v1/update-status-visite-req/${id}`, {
+                    status: "Approved"
+                })
+                .then(()=>renderrequests())
+                console.log(res.data);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        async function SetStatusdecline(id) {
+            console.log("clicked");
+            try {
+                const res = await axios.put(`/api/v1/update-status-visite-req/${id}`, {
+                    status: "Declined"
+                })
+                .then(()=>renderrequests())
+
+                .catch((res)=>{console.log(res)})
+            } catch (error) {
+                console.log(error);
+            }
+        }
+ </script>
+</body>
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell A boat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/js/tailwindConfig.js"> </script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/animation.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/slider.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../assets/css/navslider.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aboreto&family=Acme&family=Inter+Tight:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:ital,wght@1,500;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@700&family=Pacifico&family=Permanent+Marker&family=Playfair+Display:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Glitch&family=Ubuntu+Condensed&family=Ubuntu:wght@500&family=Work+Sans:ital,wght@0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+<body onload="showLoader()" class="bg-[#014d53] max:[1400px]:text-[15px] min-[1450px]:text-[17px] min-[1550px]:text-[18px] min-[1650px]:text-[19px] min-[1750px]:text-[20px] min-[1650px]:text-[19px] min-[1750px]:text-[20px] min-[1850px]:text-[21px] min-[1950px]:text-[22px] min-[2050px]:text-[23px] min-[2150px]:text-[24px] min-[2250px]:text-[25px] min-[2350px]:text-[26px] min-[2450px]:text-[26px] min-[2550px]:text-[27px] min-[2650px]:text-[28px] min-[2750px]:text-[29px] min-[2850px]:text-[30px] min-[2950px]:text-[31px] min-[3050px]:text-[32px]">
+    <div>
+      <div class=" text-white "style="background-image:linear-gradient( 360deg , #014d53, #9a030000 15%)  , url('../assets/images/inner-bg.jpg'); background-size:cover; background-repeat: no-repeat;">
+  
+        <nav style="font-family: 'Urbanist';" class="text-[90%] font-[100]">
+            <!-- main menu  -->
+            <div class="main_menu">
+                <ul>
+                    <li class="font-semibold" style="--i: 1"><span>
+                            <div></div>
+                        </span> <a href=/home">Home</a>
+        
+                    </li>
+                    <li><span>
+                            <div></div>
+                        </span> <a href="/contact">Dealer info</a>
+                        <div class="slide-show">
+                            <span class="w-full p-[2%] max-w-[50%] flex flex-col justify-center items-baseline"
+                                style="width: 100%; align-items: baseline;">
+                                <a class="text-base pt-[3%]" href="/about">About US</a>
+                                <a class="text-base pt-[3%]" href="/broker">why Use A Broker</a>
+                                <a class="text-base pt-[3%]" href="/howWeHelp">how we help</a>
+                                <a class="text-base pt-[3%]" href="/contact">Contact US</a>
+        
+        
+                            </span>
+                            <span class="w-full max-w-[50%]" style="width: 100%;">
+                                <img class="w-full h-full " style="width: 100%;"
+                                    src="../assets/images/home/ship.png" alt="">
+                            </span>
+                        </div>
+                    </li>
+                    <li style="--i: 2"><span>
+                            <div></div>
+                        </span> <a href="/shop">boat for sale</a></li>
+                    <li style="--i: 3"><span>
+                            <div></div>
+                        </span> <a href="/sell-boat">Sale a boat</a></li>
+                </ul>
+                <div class="border border-[rgb(191_168_138)] w-[35%]" style="--i: 5">
+                    <!-- middle logo  -->
+                    <img src="../assets/images/shiplogo.png" class="w-[100%]">
+                </div>
+            </div>
+            <!-- large Screen menu  -->
+            <ul id="menu">
+                <li class="--i:6"><span>
+                        <div></div>
+                    </span> <a href="/services" style="">Service</a>
+                    <div class="slide-show">
+                        <span class="w-full p-[2%] max-w-[50%] flex flex-col justify-center items-baseline"
+                            style="width: 100%; align-items: baseline;">
+                            <a href="/service">Transporting
+                                And Shipping</a>
+                            <a href="/help">How we
+                                help</a>
+                        </span>
+                        <span class="w-full max-w-[50%]" style="width: 100%;">
+                            <img class="w-full" src="../assets/images/home/ship.png" alt="">
+                        </span>
+                    </div>
+                </li>
+        
+                <li class="--i:7"><span>
+                        <div></div>
+                    </span> <a href="/did-you-know" style="">Did you know?</a>
+        
+                </li>
+                <li style="--:8" class="text-[120%]"><span>
+                        <div></div>
+                    </span>
+                    <a href="/wishlist"><i class="bi bi-heart"></i></a>
+                </li>
+                <li style="--i:9" class="text-[130%] mr-4"><span>
+                        <div></div>
+                    </span>
+                    <a href=""><i class="bi bi-basket2"></i></a>
+                </li>
+                <a  href="/login"><button class="btn" id="loginbtn" style="--i:10">Login</button></a>
+            </ul>
+        
+            <!-- drop down components  -->
+            <div class="menu">
+                <div class="toggle_btn">
+                    <i class="bi bi-list"></i>
+                </div>
+                <div class="drop_down">
+                    <li><a href="../home.html">Home</a></li>
+                    <li><a href="../pages/contact.html">Dealer info</a></li>
+                    <li><a href="../pages/shop.html">boat for sale</a></li>
+                    <li><a href="../pages/sellpage.html">Sale a boat</a></li>
+        
+                    <li><a href="../pages/services.html">Service</a></li>
+                    <li><a href="../pages/didyouknow.html">Did you know?</a></li>
+                    <li>
+                        <a href=""><i class="bi bi-heart"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="bi bi-trash"></i></a>
+                    </li>
+                    <li>
+                        <button href="../index.html" class="btn" id="loginbtn">Login</button>
+                    </li>
+                </div>
+                <button href="../index.html" class="btn">Login</button>
+            </div>
+        </nav>
+
+
+          <div  class="h-[49vh] flex justify-center items-center"data-aos="fade-up">
+            <h1 class="text-3xl md:text-4xl font-[600] mb-[6%]" style="font-family: 'Playfair Display';">Sell A Boat</h1>
+
+          </div>
+     </div>
+         <div class="px-[15px] sm:px-[0] pb-[20px] sm:pb-[0] text-white flex justify-center">
+          <div class="md:max-w-[63%] py-[3%]">
+            <h1 class="text-3xl md:text-4xl text-center mb-[1%] font-bold" style="font-family: 'Playfair Display';">Why sell with us?</h1>
+            <p class="text-base text-center text-[#E8E8E8]">Yacht brokers work entirely on commission. We don’t get paid until you sell. We offer non-exclusive services, meaning you can list with other brokers or try to sell on your own, while we work for you <br><br>
+              Your time is very valuable. We will sift through the buyers and filter out the fender kickers. We will prequalify buyers with our lenders prior to getting you involved. Financing can be very difficult in the marine world, but with us involved, the process need not be long and strenuous. We also can help value your boat with tools including the Nada Marine Appraisal Guide, the broker-only soldboats.com and by analyzing the current market.</p>
+           </div>
+         </div>
+         <div class="bg-[#0e565c] text-white flex flex-wrap">
+            <div class="   max-[1095px]:w-full w-[50%] ">
+                <img src="../assets/images/sellpage/slider-1.png" data-aos="slide-left" alt="" class="w-[100%]">
+            </div>
+            <div 
+                <div class="w-[70%] flex flex-col items-center justify-center">
+                    <div class="w-[100px] h-[100px] mb-2">
+                        <img class="w-full" src="../assets/images/sellpage/banner-1.png" alt="">
+                    </div>
+                    <p class="text-[#E8E8E8]">The world has moved online. These days, we like to collect a much more in-depth portfolio of details consisting of upgrades, pictures and videos (including digital walkthroughs and drone footage). This is important when purchasers are deciding to travel outside the safety of their homes, often to a different city or country. We will go the extra mile to make them feel safe and that their time is worthwhile.</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-[#E8E8E8] flex justify-center my-6 md:my-10 ">
+            <div class="p-4  md:p-10 shadow-[0px_0px_5px_#00000099] max-w-[90%] w-full">
+                <div class="border-2 border-[#BFA888] px-[30px] pb-6" style="background-image: url('../assets/images/sellpage/Mask\ Group\ 18.png'); background-repeat:no-repeat; background-position:top left;background-size: 12%;">
+                    <div>
+                       <form id="getAValuation">
+                        <h1 class="font-bold text-xl md:text-3xl text-center my-[2%]" style="font-family: 'Playfair Display';">
+                            GET A VALUATION ON YOUR BOAT
+                        </h1>
+                        <div>
+                            <h1 class="text-xl font-bold">Personal Details</h1>
+                            <div class="flex flex-wrap gap-x-[30px] gap-y-[20px]">
+                                <label for="" class=" w-[100%] md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                      Your first name
+                                    </span>
+                                    <input type="text" name="" placeholder="enter your first name" id="firstname" class="outline-none bg-transparent text-sm px-3 py-[2%] rounded border border-[#BFA888] w-[100%]">
+                                </label>
+                                <label for="" class="w-[100%]  md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                      Your last name
+                                    </span>
+                                    <input type="text" name="" placeholder="enter last name" id="lastname" class="outline-none bg-transparent text-sm px-3 py-[2%] rounded border border-[#BFA888] w-[100%]">
+                                </label>
+                                <label for="" class="block w-[100%] md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                      Your Email 
+                                    </span>
+                                    <input type="email" name="" placeholder="enter your email" id="email" class="outline-none bg-transparent text-sm px-3 py-[2%] rounded border  border-[#BFA888] w-[100%]">
+                                </label>
+                                <label for="" class="block w-[100%] md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                      Your Number
+                                    </span>
+                                    <input type="number" name="" placeholder="enter your Phone Number" id="phonenumber" class="outline-none bg-transparent text-sm px-3 py-[2%] rounded border  border-[#BFA888] w-[100%]">
+                                </label>
+                                <label for="" class="block w-[100%] md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                      Your Address
+                                    </span> <textarea name="" id="address" cols="30" rows="10" class="outline-none bg-transparent text-sm px-3 py-[2%] rounded border border-[#BFA888] w-[100%]"></textarea>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <h1 class="text-xl font-bold">Boat Details</h1>
+                            <div class="flex flex-wrap gap-x-[30px] gap-y-[20px]">
+                                <label for="" class="w-[100%]  md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                      Make
+                                    </span>
+                                    <input type="text" name="" placeholder="Make" id="make" class="outline-none bg-transparent text-sm px-3 py-[2%] rounded border  border-[#BFA888] w-[100%]">
+                                </label>
+                                <label for="" class=" w-[100%] md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                      Model
+                                    </span>
+                                    <input type="text" name="" placeholder="Model" id="model" class="outline-none bg-transparent text-sm px-3 py-[2%] rounded border  border-[#BFA888] w-[100%]">
+                                </label>
+                                <label for="" class="block w-[100%] md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                      engine
+                                    </span>
+                                    <input type="text" name="" placeholder="engine" id="engine" class="outline-none bg-transparent text-sm px-3 py-[2%] rounded border  border-[#BFA888] w-[100%]">
+                                </label>
+                                <label for="" class="block w-[100%] md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                      Hours
+                                    </span>
+                                    <input type="text" name="" placeholder="Hours" id="hours" class="outline-none bg-transparent text-sm px-3 py-[2%] rounded border  border-[#BFA888] w-[100%]">
+                                </label>
+                                <label for="" class="block w-[100%] md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                      Generator(Yes/No)
+                                    </span>
+                                    <input type="text" name="" placeholder="Generator" id="generator" class="outline-none bg-transparent text-sm px-3 py-[2%] rounded border  border-[#BFA888] w-[100%]">
+                                </label>
+                                <label for="" class="block w-[100%] md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                      Boat Name
+                                    </span>
+                                    <input type="text" name="" placeholder="Boat Name" id="boatname" class="outline-none bg-transparent text-sm px-3 py-[2%] rounded border  border-[#BFA888] w-[100%]">
+                                </label>
+                                <label for="" class="block w-[100%] md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                      Location
+                                    </span>
+                                    <input type="text" name="" placeholder="Location" id="location" class="outline-none bg-transparent text-sm px-3 py-[2%] rounded border  border-[#BFA888] w-[100%]">
+                                </label>
+                                <label for="" class="block w-[100%] md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                      Boat Condition
+                                    </span>
+                                    <input type="text" name="" placeholder="Boat Condition" id="boatCondition" class="outline-none bg-transparent text-sm px-3 py-[2%] rounded border  border-[#BFA888] w-[100%]">
+                                </label>
+                                <label for="" class="block w-[100%] md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                     Amount of owner(if know)
+                                    </span>
+                                    <input type="text" name="" placeholder="Amount of owner" id="amountofowner" class="outline-none bg-transparent text-sm px-3 py-[2%] rounded border  border-[#BFA888] w-[100%]">
+                                </label>
+                                <label for="" class="block w-[100%] md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                      Owner outright
+                                    </span>
+                                    <input type="text" name="" placeholder="Owner outright" id="owneroutright" class="outline-none bg-transparent text-sm px-3 py-[2%] rounded border  border-[#BFA888] w-[100%]">
+                                </label>
+                                <label for="" class="block w-[100%] md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                      Attatchment(Png/Jpeg/Jpg/PDF)
+                                    </span>
+                                    <input type="file" name="" multiple placeholder="Owner outright" id="attatchment" class="outline-none bg-transparent text-sm px-3 py-[2%] rounded border  border-[#BFA888] w-[100%]">
+                                </label>
+                                <label for="" class="block w-[100%] md:w-[45%]">
+                                    <span class="text-sm tracking-[-0.025rem]">
+                                      Route
+                                    </span>
+                                    <div class="flex gap-6">
+                                        <div class="flex items-center">
+                                            <input type='radio' name="route"  id="route" class="outline-none bg-transparent">
+                                            <h1 class="text-sm">Fresh Water</h1>
+                                       
+                                        </div>
+                                        <div class="flex items-center">
+                                            <input type='radio' name="route" placeholder="Owner outright" id="route" class="outline-none bg-transparent">
+                                            <h1 class="text-sm">Salt Water</h1>
+                                    
+                                        </div>
+                                    </div>
+                                </label>
+                                <label for="" class="block w-[100%] md:w-[100%]">
+                                  <span class="text-sm tracking-[-0.025rem]">
+                                    Add note?
+                                  </span> <textarea name="" id="note" cols="30" rows="10" class="outline-none bg-transparent text-sm px-3 py-1 rounded border border-[#BFA888] w-[100%]"></textarea>
+                              </label>
+                              <div class="flex justify-center w-full">
+                                <button class="px-[6%] py-[1%] font-semibold text-black rounded shadow bg-white">Submit</button>
+                              </div>
+                            </div>
+                        </div>
+                       </form>    
+                    </div>
+                </div>
+            </div>
+         </div>
+         <footer class="text-white ">
+          <div style="background-image: linear-gradient(360deg , #112F42, #9a030000 25%) , linear-gradient(#014d53, #9a030000 25%) , url('../assets/images/footer-bg.jpg'); background-size: cover;"
+              class="py-[3%] w-full  p-4 md:pb-[8%] md:pt-[6%]">
+              <div class="sm:flex sm:items-center sm:justify-between md:px-[3%] items-flex-start"
+                  style="align-items: flex-start;">
+                  <div class="max-w-[20%] border md:mr-[7%]">
+                      <img src="../assets/images/footer-logo.png" class="w-[90%]"
+                          alt="logo" />
+                  </div>
+      
+                  <div class="flex flex-wrap gap-[50px] w-full justify-between">
+                      <ul class="flex flex-col items-start text-[17px] font-[100]">
+                          <h1 class="text-[23px] ">Other links</h1>
+                          <li>
+                              <a href="home.html" class="hover:underline md:">Home</a>
+                          </li>
+                          <li>
+                              <a href="about.html" class=" hover:underline md: ">About</a>
+                          </li>
+                          <li>
+                              <a href="contact.html" class="hover:underline">Contact</a>
+                          </li>
+                          <li>
+                              <a href="howWeHelp.html" class=" hover:underline md: ">How we help</a>
+                          </li>
+      
+                          <li>
+                              <a href="didyouknow.html" class="hover:underline">Did you know</a>
+                          </li>
+                      </ul>
+                      <ul class="flex flex-col items-start text-[17px] font-[100]">
+                          <h1 class="text-[23px] "> Other links</h1>
+                          <li>
+                              <a href="shop.html" class=" hover:underline md: ">Boats for Sale</a>
+                          </li>
+                          <li>
+                              <a href="sellpage.html" class="hover:underline md:">Sell a Boat</a>
+                          </li>
+                          <li>
+                              <a href="braker.html" class=" hover:underline md: ">Why use a Broker?</a>
+                          </li>
+                          <li>
+                              <a href="" class="hover:underline">Financing</a>
+                          </li>
+                      </ul>
+                      <ul class="flex flex-col items-start text-[17px] font-[100]">
+                          <h1 class="text-[23px] ">Contact Information</h1>
+                          <li>
+                              <a href="#" class=" hover:underline md: ">102 Lakeshore Rd E, Mississauga,
+                                  ON L5G 1E3, Canada</a>
+                          </li>
+                          <li>
+                              <a href="#" class="hover:underline md:">justin.ramirez@mail.com</a>
+                          </li>
+                          <li>
+                              <a href="#" class=" hover:underline md: ">(268)013-4757</a>
+                          </li>
+                          <li class="flex mt-2">
+      
+      
+      
+                              <a href=""><img
+                                      class="transition ease-in-out delay-40 w-[70%] hover:scale-[1.3] duration-[.3s]"
+                                      src="../assets/images/icons/facebook.png" alt=""></a>
+      
+      
+                              <a href=""><img
+                                      class=" transition ease-in-out delay-40 w-[70%] hover:scale-[1.3] duration-[.3s]"
+                                      src="../assets/images/icons/twitter.png" alt=""></a>
+      
+      
+                              <a href=""><img
+                                      class="transition ease-in-out delay-40 w-[70%] hover:scale-[1.3] duration-[.3s]"
+                                      src="../assets/images/icons/instagram.png" alt=""></a>
+      
+                      </ul>
+                      </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div>
+              <div class='bg-[#112F42] py-2'>
+                  <hr class="border-[#BFA888] sm:mx-auto dark:border-gray-700 " />
+                  <span class="block text-base text-white py-[1%] text-center ">© 2023 <a href="#"
+                          class="hover:underline">Yacht™</a>. All Rights Reserved.</span>
+              </div>
+      
+          </div>
+      </footer>
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.js"></script>
+<script src="../assets/js/popupmessageshow.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script src="../assets/js/custom.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+      <script type="text/javascript">
+          function showLoader(){
+    $.LoadingOverlay("show",{
+      background  : "#e5e7eb",
+      image       : "../assets/images/logo.png",
+      progress    : true,
+      fontawesome : "fa fa-cog fa-spin",
+      text        : "Yacht Master INC.",
+      textAnimation  : "pulse"
+    });
+
+// Hide it after 3 seconds
+setTimeout(function(){
+$.LoadingOverlay("hide");
+}, 4500);
+}
+
+
+document.getElementById("getAValuation").addEventListener("submit",async(e)=>{
+    e.preventDefault()
+
+
+    
+   try {
+    const formData = new FormData();
+
+// Append all the form fields to the FormData object
+formData.append("firstJame",document.getElementById("firstname").value);
+formData.append("lastName", document.getElementById("lastname").value);
+formData.append("engine", document.getElementById("engine").value);
+formData.append("hours", document.getElementById("hours").value);
+formData.append("boatName", document.getElementById("boatname").value);
+formData.append("generator", document.getElementById("generator").value);
+formData.append("boatCondition", document.getElementById("boatCondition").value);
+formData.append("location", document.getElementById("location").value);
+formData.append("owneroutright", document.getElementById("owneroutright").value);
+formData.append("amountofowner", document.getElementById("amountofowner").value);
+formData.append("route", document.getElementById("route").value);
+formData.append("filename", document.getElementById("attatchment").files[0]); // Handle files like this
+formData.append("addNote", document.getElementById("note").value);
+formData.append("address", document.getElementById("address").value);
+formData.append("make", document.getElementById("make").value);
+formData.append("model", document.getElementById("model").value);
+formData.append("email", document.getElementById("email").value);
+formData.append("phoneNumber", document.getElementById("phonenumber").value);
+console.log("fa", formData.get("filename"))
+   const res =await axios.post('/api/v1/getAValution', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data', // Important for file upload
+        },})
+        .then((res)=>{
+            console.log(res)
+            PopUpMessage(res.data)
+        })
+        .catch((e)=>{
+            console.log(e)
+            PopUpMessage(e.response.data)
+        })
+    console.log(res.data)
+   } catch (error) {
+    cosnole.log(error)
+    PopUpMessage(error.response.data)
+
+   }
+})
+
+      </script>
+</body>
+</html>

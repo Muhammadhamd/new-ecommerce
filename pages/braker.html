@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwindConfig.js"> </script>
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/animation.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/navbar.css">
+  <link rel="stylesheet" href="../assets/css/slider.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../assets/css/navslider.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Acme&family=Inter+Tight:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:ital,wght@1,500;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@700&family=Pacifico&family=Permanent+Marker&family=Playfair+Display:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Glitch&family=Ubuntu+Condensed&family=Ubuntu:wght@500&family=Work+Sans:ital,wght@0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+
+<body onload="showLoader()"
+  class="bg-[#014d53] max:[600px]:text-[12px] max:[1400px]:text-[16px] min-[1450px]:text-[17px] min-[1550px]:text-[18px] min-[1650px]:text-[19px] min-[1750px]:text-[20px] min-[1650px]:text-[19px] min-[1750px]:text-[20px] min-[1850px]:text-[21px] min-[1950px]:text-[22px] min-[2050px]:text-[23px] min-[2150px]:text-[24px] min-[2250px]:text-[25px] min-[2350px]:text-[26px] min-[2450px]:text-[26px] min-[2550px]:text-[27px] min-[2650px]:text-[28px] min-[2750px]:text-[29px] min-[2850px]:text-[30px] min-[2950px]:text-[31px] min-[3050px]:text-[32px] ">
+  <div>
+    <div class=" text-white "style="background-image:linear-gradient( 360deg , #014d53, #9a030000 15%)  , url('../assets/images/inner-bg.jpg'); background-size:cover; background-repeat: no-repeat;">
+      <nav style="font-family: 'Urbanist';" class="text-[90%] font-[100]">
+        <!-- main menu  -->
+        <div class="main_menu">
+            <ul>
+                <li class="font-semibold" style="--i: 1"><span>
+                        <div></div>
+                    </span> <a href=/home">Home</a>
+    
+                </li>
+                <li><span>
+                        <div></div>
+                    </span> <a href="/contact">Dealer info</a>
+                    <div class="slide-show">
+                        <span class="w-full p-[2%] max-w-[50%] flex flex-col justify-center items-baseline"
+                            style="width: 100%; align-items: baseline;">
+                            <a class="text-base pt-[3%]" href="/about">About US</a>
+                            <a class="text-base pt-[3%]" href="/broker">why Use A Broker</a>
+                            <a class="text-base pt-[3%]" href="/howWeHelp">how we help</a>
+                            <a class="text-base pt-[3%]" href="/contact">Contact US</a>
+    
+    
+                        </span>
+                        <span class="w-full max-w-[50%]" style="width: 100%;">
+                            <img class="w-full h-full " style="width: 100%;"
+                                src="../assets/images/home/ship.png" alt="">
+                        </span>
+                    </div>
+                </li>
+                <li style="--i: 2"><span>
+                        <div></div>
+                    </span> <a href="/shop">boat for sale</a></li>
+                <li style="--i: 3"><span>
+                        <div></div>
+                    </span> <a href="/sell-boat">Sale a boat</a></li>
+            </ul>
+            <div class="border border-[rgb(191_168_138)] w-[35%]" style="--i: 5">
+                <!-- middle logo  -->
+                <img src="../assets/images/shiplogo.png" class="w-[100%]">
+            </div>
+        </div>
+        <!-- large Screen menu  -->
+        <ul id="menu">
+            <li class="--i:6"><span>
+                    <div></div>
+                </span> <a href="/services" style="">Service</a>
+                <div class="slide-show">
+                    <span class="w-full p-[2%] max-w-[50%] flex flex-col justify-center items-baseline"
+                        style="width: 100%; align-items: baseline;">
+                        <a href="/service">Transporting
+                            And Shipping</a>
+                        <a href="/help">How we
+                            help</a>
+                    </span>
+                    <span class="w-full max-w-[50%]" style="width: 100%;">
+                        <img class="w-full" src="../assets/images/home/ship.png" alt="">
+                    </span>
+                </div>
+            </li>
+    
+            <li class="--i:7"><span>
+                    <div></div>
+                </span> <a href="/did-you-know" style="">Did you know?</a>
+    
+            </li>
+            <li style="--:8" class="text-[120%]"><span>
+                    <div></div>
+                </span>
+                <a href="/wishlist"><i class="bi bi-heart"></i></a>
+            </li>
+            <li style="--i:9" class="text-[130%] mr-4"><span>
+                    <div></div>
+                </span>
+                <a href=""><i class="bi bi-basket2"></i></a>
+            </li>
+            <a  href="/login"><button class="btn" id="loginbtn" style="--i:10">Login</button></a>
+        </ul>
+    
+        <!-- drop down components  -->
+        <div class="menu">
+            <div class="toggle_btn">
+                <i class="bi bi-list"></i>
+            </div>
+            <div class="drop_down">
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="../pages/contact.html">Dealer info</a></li>
+                <li><a href="../pages/shop.html">boat for sale</a></li>
+                <li><a href="../pages/sellpage.html">Sale a boat</a></li>
+    
+                <li><a href="../pages/services.html">Service</a></li>
+                <li><a href="../pages/didyouknow.html">Did you know?</a></li>
+                <li>
+                    <a href=""><i class="bi bi-heart"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="bi bi-trash"></i></a>
+                </li>
+                <li>
+                    <button href="../index.html" class="btn" id="loginbtn">Login</button>
+                </li>
+            </div>
+            <button href="../index.html" class="btn">Login</button>
+        </div>
+    </nav>
+        <div  class="h-[49vh] flex justify-center items-center">
+          <h1 class="text-3xl md:text-4xl font-[600] mb-[6%]"data-aos="slide-down" style="font-family: 'Playfair Display';">Why Use a Broker</h1>
+
+        </div>
+   </div>
+
+    <div class="flex px-[5%] md:px-[10%] py-[6%] md:py-[4%]  text-white flex-col-reverse md:flex-row">
+      <div class="max-w-[100%] md:max-w-[44%] mr-[14%] mt-[3%] md:mt-[0]" data-aos="slide-right">
+        <h1 class="text-3xl md:text-4xl" style="font-family: 'Playfair';">LOREM IPSUM </h1>
+        <p class="text-[110%] text-[#e8e8e8] my-[1%] w-[100]" style="font-family: 'Urbanist';">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+          beatae porro minus mollitia delectus doloribus reprehenderit et, fugiat voluptatibus necessitatibus! Lorem
+          ipsum dolor sit, amet consectetur adipisicing elit. Sit vel pariatur harum qui a. Ab nam, cumque quasi
+          voluptatem, explicabo culpa, hic perferendis quam inventore modi tempore autem distinctio dolore.</p>
+        <p class="text-[110%] text-[#e8e8e8] my-[1%] w-[100]" style="font-family: 'Urbanist';">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+          vel pariatur harum qui a. Ab nam, cumque quasi voluptatem, explicabo culpa, hic perferendis quam inventore
+          modi tempore autem distinctio dolore.</p>
+        <button class="px-[2.5%] py-[1.5%] mt-[3%] text-[120%] rounded shadow bg-white text-black" style="font-family: 'Urbanist';">Visite our page</button>
+      </div>
+      <div class=" max-w-[75%] m-auto md:m-[0] md:max-w-[30%]"data-aos="slide-left">
+        <img src="../assets/images/broker/banner-1.png" alt="" class="w-full">
+      </div>
+    </div>
+    <div style="background: url('../assets/images/broker/bg.jpg')no-repeat center ; background-size: cover;  "class="py-[4%]">
+      <div class="w-full text-white flex flex-col items-center">
+        <img src="../assets/images/logo.png" class="max-w-[26%]" alt="">
+        <h1 class="pl-[3%] sm:pl-[0] text-xl sm:text-2xl text-semibold"data-aos="slide-down">Why use a broker to help you to buy a boat</h1>
+      </div>
+      <div style="font-family: 'Urbanist';">
+        <div class="pt-[3%] sm:pt-[0]">
+         <p class="text-[100%] font-[400] max-w-[90%] text-[#e8e8e8] ml-[5%]"data-aos="slide-left">
+          Yacht Brokers work like real estate agents. They are agents whom people consult to find and purchase a boat, and whom people hire to list, represent, and sell boats for them. Traditionally, the seller pays the commissions that a yacht broker earns – not the buyer, yet brokers have a duty to both buyer and seller in every transaction.
+<br><br>
+          Boat Dealers represent new boat lines. They often take “trade-ins” to facilitate the sale of a new boat. Dealers advertise their trade-ins, often at very good buys. Some dealers will refurbish the boat before putting it on the market. Some dealers offer a pre-owned boat warranty program, similar to the automotive industry, particularly in smaller craft.
+          <br><br>
+          
+          The broker’s role for the buyer
+         </p>
+          
+        </div>
+        <div class="mx-[4%] flex flex-col ">
+          <div class="text-white font-[400] flex items-start justify-center items-baseline gap-[2em]">
+            <div class="text-[200%] flex items-start">•</div>
+            <p class="text-[100%]  max-w-[90%] text-[#e8e8e8]"data-aos="slide-right">
+              Most pre-owned boats advertised on YachtWorld are either a “central agency listing" of a yacht broker, or
+              a trade-in from a new boat dealer. It you are viewing a
+              broker listing or a trade-in, the listing broker or dealer is likely to know the vessel inside and out.
+              They have been selected by the owner/seller to exclusively represent
+              this vessel (or the dealership may now own the vessel) and all inquiries must go through this yacht broker
+              or boat dedler. If you are not already working with a yacht
+              broker, and if you find a boat on YachtWorld of interest, you may contact the listing broker directly.
+              However, a more rewarding option might be to select a yacht
+              broker of your own, and consult with that broker about all of your boats of interest, and let that broker
+              represent you in your inquiries and transactions.
+            </p>
+          </div>
+
+
+
+          <div class="text-white font-[400] flex justify-center items-baseline gap-[2em] ">
+            <div class="text-[200%]">•</div>
+
+            <p class="text-base max-w-[90%]  text-[#e8e8e8]"data-aos="slide-left">
+              The Initial Inquiry — A professional broker will listen closely to your wants and needs and will help you
+              determine if the boat you are calling on is the right boat for
+              you at the best value. They can objectively tell you about the condition of the vessel before you decide
+              whether or not to spend your time to look at the boat. They
+              will help you determine if there are similar boats on (and off) the market, the history of the yacht, how
+              long it has been on the market, and the motivation of the
+              seller. Anyone can look up asking prices on boats, but it takes a professional broker to have an infimate
+              knowledge of current market conditions, a familiarity of
+              similar boats, and information on recent sale prices and time on the market through www .soldboats.com, an
+              industry resource not available to the public.
+
+            </p>
+          </div>
+
+          <div class="text-white font-[400] flex justify-center items-baseline gap-[2em] ">
+            <div class="text-[150%]">•</div>
+
+            <p class="text-base max-w-[90%] text-[#e8e8e8]"data-aos="slide-right">
+              Getting a Boat Loan and Marine Insurance — You may want to pre-qualify for a boat loan before you shop.
+              That will give you some extra leverage and breathing
+              room when you're negotiating prices. YachtWorld offers a variety of specialist marine lenders.
+
+            </p>
+          </div>
+          <div class="text-white font-[400] flex justify-center items-baseline gap-[2em]">
+            <div class="text-[200%]">•</div>
+
+            <p class="text-base max-w-[90%] text-[#e8e8e8]"data-aos="slide-left">
+              Making an Offer on a Pre-Owned Boat — A professional broker can help you decide on a redlistic offer that
+              increases the chances of buying a pre-owned boat for
+              a fair and reasonable price, and with the necessary elements to protect your interests. Your broker
+              prepares an Offer to Purchase for your signature. It should spell
+              out the terms of the sale including obligations that you and the seller have agreed to, and when these
+              obligations will be fulfilled. You also make a good-faith deposit
+              on the boat, which is usually placed in escrow and subject to sea trial and survey.
+
+            </p>
+          </div>
+
+          <div class="text-white font-[400] flex justify-center items-baseline gap-[2em]">
+            <div class="text-[200%]">•</div>
+
+            <p class="text-base max-w-[90%] text-[#e8e8e8]"data-aos="slide-right">
+              Paperwork — Professional brokers and dealers are familiar with all the paper work requirements for their
+              each country, state or province, from the initial Offer to
+              Purchase and Bill of Sale to licensing and registration; or documentation and titling, to paying tax and
+              other fees, as well as certificates of ownership, security
+              agreements, and other documents needed to complete a sale. For example, 23 forms are needed at a closing
+              of a brokerage boat in Florida (27 for foreign-flagged
+              vessels). Professionals will understand maritime and admiralty liens for the type of vessels they
+              represent, as well as agency contracts, listing agreements, closing
+              statements, deposit requirements and escrowed accounts to safeguard funds.
+
+            </p>
+          </div>
+
+          <div class="text-white font-[400] flex justify-center items-baseline gap-[2em]">
+            <div class="text-[200%]">•</div>
+
+            <p class="text-base max-w-[90%] text-[#e8e8e8]"data-aos="slide-left">
+              Sea Trial and Survey — The buyer of a pre-owned vessel will usually request a sea trial and the services
+              of a marine surveyor. Buyers pay for the surveys and for
+              hauling the boat out of the water for inspection. Your yacht broker will usually attend the sea trial and
+              marine survey with you, and help you determine how to
+              properly address the nearly inevitable yacht survey issues and put the problems in context. They can help
+              estimate time and cost of correcting. and where to obtain
+              accurate quotes for items that are unfamiliar. Your lender and insurance carrier will usually require a
+              copy of the survey.
+
+            </p>
+          </div>
+
+          <div class="text-white font-[400] flex justify-center items-baseline gap-[2em]">
+            <div class="text-[200%]">•</div>
+
+            <p class="text-base max-w-[90%] text-[#e8e8e8]"data-aos="slide-right">
+              The Art of Negotiating The Deal — The broker can use his position as a middleman to keep the negotiations
+              between buyer and seller moving to a successful
+              conclusion.
+            </p>
+          </div>
+
+          <div class="text-white font-[400] flex justify-center items-baseline gap-[2em]">
+            <div class="text-[200%]">•</div>
+
+            <p class="text-base max-w-[90%] text-[#e8e8e8]"data-aos="slide-left">
+              Safeguard Funds — A professional broker will use an escrow account for clients’ funds, and ensure that at
+              closing, any existing loan or other encumbrances is paid
+              off. This safeguard is of critical importance to the buyer and seller, and can be a potentially serious
+              hazard in a private transaction not involving a broker.
+
+            </p>
+          </div>
+          <div class="text-white font-[400] flex justify-center items-baseline gap-[2em]">
+            <div class="text-[200%]">•</div>
+
+            <p class="text-base max-w-[90%] text-[#e8e8e8]"data-aos="slide-right">
+              After the Sale — Your broker and dealer can help you find moorage and yacht maintenance and repair
+              specialists or facilities. They can refer you to classes on
+              sailing. boat handling. and seamanship, Their experience in local waters can help you chart a course for
+              great day, weekend or longer trips. They can connect you
+              with boat clubs, races and rendezvous sponsored by builders and dealerships. Plus, you've got a new
+              boating friend for life.
+
+            </p>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div style="background-image: url('../assets/images/broker/banner-2.jpg'); background-size: cover;">
+
+      <div class="text-white flex flex-col items-center p-[5%] w-full">
+        <h1 class=" text-2xl font-bold mb-[3%]"data-aos="fade-up">Why Use A Broker To Help you Buy A Boat</h1>
+        <p class="text-[#e8e8e8] font-regular text-base max-w-[100%] sm:max-w-[60%]"data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Beatae, adipisci! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis eius alias vitae ullam
+          veritatis non deleniti, minus dignissimos illo? Quia aliquam sint voluptatibus id ratione doloremque
+          accusantium ab, sapiente sunt!</p>
+        <button class="bg-white text-black px-[2%] py-[1%] text-sm rounded shadow mt-[2%]"data-aos="fade-up"> Visite our page</button>
+      </div>
+
+    </div>
+    <footer class="text-white ">
+      <div style="background-image: linear-gradient(360deg , #112F42, #9a030000 25%) , linear-gradient(#014d53, #9a030000 25%) , url('../assets/images/footer-bg.jpg'); background-size: cover;"
+          class="py-[3%] w-full  p-4 md:pb-[8%] md:pt-[6%]">
+          <div class="sm:flex sm:items-center sm:justify-between md:px-[3%] items-flex-start"
+              style="align-items: flex-start;">
+              <div class="max-w-[20%] border md:mr-[7%]">
+                  <img src="../assets/images/footer-logo.png" class="w-[90%]"
+                      alt="logo" />
+              </div>
+  
+              <div class="flex flex-wrap gap-[50px] w-full justify-between">
+                  <ul class="flex flex-col items-start text-[17px] font-[100]">
+                      <h1 class="text-[23px] ">Other links</h1>
+                      <li>
+                          <a href="home.html" class="hover:underline md:">Home</a>
+                      </li>
+                      <li>
+                          <a href="about.html" class=" hover:underline md: ">About</a>
+                      </li>
+                      <li>
+                          <a href="contact.html" class="hover:underline">Contact</a>
+                      </li>
+                      <li>
+                          <a href="howWeHelp.html" class=" hover:underline md: ">How we help</a>
+                      </li>
+  
+                      <li>
+                          <a href="didyouknow.html" class="hover:underline">Did you know</a>
+                      </li>
+                  </ul>
+                  <ul class="flex flex-col items-start text-[17px] font-[100]">
+                      <h1 class="text-[23px] "> Other links</h1>
+                      <li>
+                          <a href="shop.html" class=" hover:underline md: ">Boats for Sale</a>
+                      </li>
+                      <li>
+                          <a href="sellpage.html" class="hover:underline md:">Sell a Boat</a>
+                      </li>
+                      <li>
+                          <a href="braker.html" class=" hover:underline md: ">Why use a Broker?</a>
+                      </li>
+                      <li>
+                          <a href="" class="hover:underline">Financing</a>
+                      </li>
+                  </ul>
+                  <ul class="flex flex-col items-start text-[17px] font-[100]">
+                      <h1 class="text-[23px] ">Contact Information</h1>
+                      <li>
+                          <a href="#" class=" hover:underline md: ">102 Lakeshore Rd E, Mississauga,
+                              ON L5G 1E3, Canada</a>
+                      </li>
+                      <li>
+                          <a href="#" class="hover:underline md:">justin.ramirez@mail.com</a>
+                      </li>
+                      <li>
+                          <a href="#" class=" hover:underline md: ">(268)013-4757</a>
+                      </li>
+                      <li class="flex mt-2">
+  
+  
+  
+                          <a href=""><img
+                                  class="transition ease-in-out delay-40 w-[70%] hover:scale-[1.3] duration-[.3s]"
+                                  src="../assets/images/icons/facebook.png" alt=""></a>
+  
+  
+                          <a href=""><img
+                                  class=" transition ease-in-out delay-40 w-[70%] hover:scale-[1.3] duration-[.3s]"
+                                  src="../assets/images/icons/twitter.png" alt=""></a>
+  
+  
+                          <a href=""><img
+                                  class="transition ease-in-out delay-40 w-[70%] hover:scale-[1.3] duration-[.3s]"
+                                  src="../assets/images/icons/instagram.png" alt=""></a>
+  
+                  </ul>
+                  </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div>
+          <div class='bg-[#112F42] py-2'>
+              <hr class="border-[#BFA888] sm:mx-auto dark:border-gray-700 " />
+              <span class="block text-base text-white py-[1%] text-center ">© 2023 <a href="#"
+                      class="hover:underline">Yacht™</a>. All Rights Reserved.</span>
+          </div>
+  
+      </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="../assets/js/custom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+  <script type="text/javascript">
+      function showLoader(){
+$.LoadingOverlay("show",{
+  background  : "#e5e7eb",
+  image       : "../assets/images/logo.png",
+  progress    : true,
+  fontawesome : "fa fa-cog fa-spin",
+  text        : "Yacht Master INC.",
+  textAnimation  : "pulse"
+});
+
+// Hide it after 3 seconds
+setTimeout(function(){
+$.LoadingOverlay("hide");
+}, 4500);
+}
+  </script>
+</body>
+
+</html>

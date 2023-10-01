@@ -15,6 +15,18 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
 app.use(cors())
+import admin from 'firebase-admin'
+import dotenv from 'dotenv';
+// import deleteImageFromStorage from "./deleteImageFunction.mjs";
+dotenv.config(); 
+import firebaseConfig from "./firebaseConfig.mjs";
+
+
+admin.initializeApp({
+    credential: admin.credential.cert(firebaseConfig),
+    storageBucket: "gs://yacht-ecommerce.appspot.com",
+  });
+
 app.use(v1unsave)
 const PORT = process.env.PORT || 4000
 

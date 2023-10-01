@@ -517,7 +517,7 @@ axios.get(`/postdata/${postId}`)
    let reviews = data.reviews
    document.getElementById("boatName").innerHTML = data.boatName
    document.getElementById("description").innerHTML = data.description
-   document.getElementById("boatimage-preview").innerHTML = ` <img src="/${data.boatimage}">`
+   document.getElementById("boatimage-preview").innerHTML = ` <img src="${data.boatimage}">`
    document.getElementById("price-div").innerHTML  =`
    ${data.issale ? `<h2 class="xl:text-3xl 2xl:text-4xl text-white font-semibold">$${data.totalPrice}</h2>
         <h3 class="text-stone-50 text-2xl text-white font-semibold"> $${data.price}</h3>`

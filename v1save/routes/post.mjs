@@ -18,18 +18,12 @@ const db = client.db("yacht"),
 
 
 
-
-
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, './uploads'); // Uploads will be stored in the 'uploads' directory
-  },
-  filename: (req, file, cb) => {
-  cb(null, `${Date.now()}-${file.originalname}`);
-  },
-});
-
-const upload = multer({ storage });
+  const upload = multer({
+    storage: multer.memoryStorage(), // Store files in memory
+    limits: {
+      fileSize: 5 * 1024 * 1024, // 5MB limit (adjust as needed)
+    },
+  });
 
 router.post("/getAValution", upload.single('filename'),  async (req, res) => {
   if (!req?.cookies?.Token) {
@@ -46,9 +40,29 @@ router.post("/getAValution", upload.single('filename'),  async (req, res) => {
   if (!req.file) {
     return res.status(400).send('No file uploaded.');
   }
+  const bucket = admin.storage().bucket();
+  const file = req.file;
+  const originalname = `${Date.now()}-${file.originalname}`;
+  const fileBuffer = file.buffer;
+  
+  // Define the path where you want to store the file in Firebase Storage.
+  const filePath = `images/valutons/${originalname}`;
 
-  const uploadedFile = req.file;
-  const imagePath = uploadedFile.path;
+  // Upload the file to Firebase Storage.
+  const fileUpload = bucket.file(filePath);
+
+  await fileUpload.save(fileBuffer, {
+      metadata: {
+          contentType: file.mimetype,
+      },
+  });
+
+  // Get the public URL of the uploaded file
+      // Get the download URL
+      const [publicUrl] = await fileUpload.getSignedUrl({
+          action: 'read',
+          expires: '01-01-3000', // Adjust the expiration date as needed
+      });
   const {
     firstName,
     LastName,
@@ -70,7 +84,7 @@ router.post("/getAValution", upload.single('filename'),  async (req, res) => {
     phoneNumber,
   } = req.body;
 
-   console.log("data updateda",imagePath)
+   console.log("data updateda",publicUrl)
   
 
  
@@ -94,7 +108,7 @@ router.post("/getAValution", upload.single('filename'),  async (req, res) => {
           owneroutright,
           amountOfOwner,
           route,
-          attachments:imagePath , // Use the URLs of uploaded attachments
+          attachments:publicUrl , // Use the URLs of uploaded attachments
           addNote,
           address,
           make,

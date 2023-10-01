@@ -9,19 +9,16 @@ const router = express.Router()
 
 const db = client.db("yacht")
 const userBlog = db.collection("userBlog")
+import admin from "firebase-admin"
 
 
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, './uploads/blogimage'); // Uploads will be stored in the 'uploads' directory
+  const upload = multer({
+    storage: multer.memoryStorage(), // Store files in memory
+    limits: {
+      fileSize: 5 * 1024 * 1024, // 5MB limit (adjust as needed)
     },
-    filename: (req, file, cb) => {
-        cb(null, `${Date.now()}-${file.originalname}`);
-    },
-});
-
-const upload = multer({ storage });
-
+  });
+  
 
 router.post('/create-blog', upload.single('head-image'), async (req, res, next) => {
     const title = req.body.text
@@ -32,13 +29,34 @@ router.post('/create-blog', upload.single('head-image'), async (req, res, next) 
         if (!req.file) {
             return res.status(400).send("No file uploaded")
         }
-        const uploadedFile = req.file;
-        const imagePath = uploadedFile.path;
+        const bucket = admin.storage().bucket();
+        const file = req.file;
+        const originalname = `${Date.now()}-${file.originalname}`;
+        const fileBuffer = file.buffer;
+        
+        // Define the path where you want to store the file in Firebase Storage.
+        const filePath = `images/employees/${originalname}`;
+
+        // Upload the file to Firebase Storage.
+        const fileUpload = bucket.file(filePath);
+
+        await fileUpload.save(fileBuffer, {
+            metadata: {
+                contentType: file.mimetype,
+            },
+        });
+
+        // Get the public URL of the uploaded file
+            // Get the download URL
+            const [publicUrl] = await fileUpload.getSignedUrl({
+                action: 'read',
+                expires: '01-01-3000', // Adjust the expiration date as needed
+            });
 
         await userBlog.insertOne({
             title: title,
             description: description,
-            image: imagePath
+            image: publicUrl
 
         })
 
@@ -64,15 +82,8 @@ router.delete('/delete-blog/:id', async (req, res) => {
     try {
         const reqId = req.params.id;
 
-        const post = await userBlog.findOne({_id : new ObjectId(req.params.id)})
-        const filePath = post.image; 
-        console.log(filePath)
-    if (filePath) {
-        // Delete the file from the server folder
-        const imagePath = path.join(__dirname,  filePath);
-        fs.unlinkSync(imagePath);
-      }
-
+        
+  
         const deleteReq = await userBlog.findOneAndDelete({
             _id: new ObjectId(reqId),
         })

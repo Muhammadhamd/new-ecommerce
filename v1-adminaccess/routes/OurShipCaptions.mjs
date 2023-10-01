@@ -6,24 +6,25 @@ import multer from 'multer'
 import path from "path"
 const __dirname = path.resolve()
 import fs from "fs"
+import admin from "firebase-admin"
+import dotenv from 'dotenv';
+import {  getStorage, ref, uploadBytes , getDownloadURL  } from "firebase/storage";
+// import deleteImageFromStorage from "./deleteImageFunction.mjs";
+dotenv.config(); 
 
 const db = client.db("yacht");
 const col = db.collection("shipcaption");
 
 let router = express.Router()
 
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, './uploads/captainsImages'); // Uploads will be stored in the 'uploads' directory
+
+  const upload = multer({
+    storage: multer.memoryStorage(), // Store files in memory
+    limits: {
+      fileSize: 5 * 1024 * 1024, // 5MB limit (adjust as needed)
     },
-    filename: (req, file, cb) => {
-        cb(null, `${Date.now()}-${file.originalname}`);
-    },
-});
-
-const upload = multer({ storage });
-
-
+  });
+  
 
 // POST    /api/v1/post
 router.post('/add-ship-caption', upload.single('head-image'),  async (req, res, next) => {
@@ -35,8 +36,31 @@ router.post('/add-ship-caption', upload.single('head-image'),  async (req, res, 
         if (!req.file) {
             return res.status(400).send("No file uploaded")
         }
-        const uploadedFile = req.file;
-        const imagePath = uploadedFile.path;
+        const bucket = admin.storage().bucket();
+        const file = req.file;
+        const originalname = `${Date.now()}-${file.originalname}`;
+        const fileBuffer = file.buffer;
+        
+        // Define the path where you want to store the file in Firebase Storage.
+        const filePath = `images/captions/${originalname}`;
+
+        // Upload the file to Firebase Storage.
+        const fileUpload = bucket.file(filePath);
+
+        await fileUpload.save(fileBuffer, {
+            metadata: {
+                contentType: file.mimetype,
+            },
+        });
+
+        // Get the public URL of the uploaded file
+            // Get the download URL
+            const [publicUrl] = await fileUpload.getSignedUrl({
+                action: 'read',
+                expires: '01-01-3000', // Adjust the expiration date as needed
+            });
+    
+
         const socialMediaLinks = {
             Instagram: instagramLink,
             fascebook: facebookLink,
@@ -49,7 +73,7 @@ router.post('/add-ship-caption', upload.single('head-image'),  async (req, res, 
             phonenumber: phonenumber,
             email: email,
             socialMediaLinks,
-            image:imagePath
+            image:publicUrl
         });
         console.log("insertResponse: ", insertResponse);
 
@@ -124,13 +148,8 @@ router.delete('/ship-caption/:postId', async (req, res, next) => {
 
     try {
         const post = await col.findOne({_id : new ObjectId(req.params.postId)})
-        const filePath = post.image; 
-        console.log(filePath)
-    if (filePath) {
-        // Delete the file from the server folder
-        const imagePath = path.join(__dirname,  filePath);
-        fs.unlinkSync(imagePath);
-      }
+       
+    
         const deleteResponse = await col.findOneAndDelete({ _id: new ObjectId(req.params.postId) });
 
         deleteResponse ? res.send('post deleted') : res.status(404).send('no post found')

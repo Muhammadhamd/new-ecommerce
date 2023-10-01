@@ -1,11 +1,8 @@
 import express from "express";
 const router = express.Router();
 import path, { join } from "path";
-import mongoose from "mongoose"
 import bcrypt from "bcrypt";
 
-import cookieParser from "cookie-parser";
-import jwt from "jsonwebtoken"
 const __dirname = path.resolve();
 const SECRET = process.env.SECRET || "topsecret";
 import {client} from "../../db/mongodb.mjs"

@@ -1,7 +1,6 @@
 import express from "express";
 const router = express.Router();
 import path, { join } from "path";
-import mongoose from "mongoose"
 import bcrypt from "bcrypt";
 
 import cookieParser from "cookie-parser";

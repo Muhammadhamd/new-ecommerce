@@ -1,8 +1,6 @@
 
 import express from "express"
-import mongoose from "mongoose"
 import path from "path"
-import axios from "axios"
 import { ObjectId } from "mongodb"
 import nodemailer from "nodemailer"
 const __dirname = path.resolve()

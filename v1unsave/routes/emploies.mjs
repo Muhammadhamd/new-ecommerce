@@ -1,7 +1,6 @@
 
 import express from 'express';
 import { client } from '../../db/mongodb.mjs'
-import { ObjectId } from 'mongodb'
 
 const db = client.db("yacht");
 const col = db.collection("employe");

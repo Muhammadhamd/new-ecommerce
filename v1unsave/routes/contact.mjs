@@ -4,9 +4,7 @@ import express from 'express'
 import path from 'path'
 const router = express.Router()
 const __dirname = path.resolve()
-import nodemailer from "nodemailer"
 import {client} from "../../db/mongodb.mjs"
-import { Timestamp } from 'mongodb'
 import emailsend from "../../emailconfog.mjs"
 const db = client.db("yacht"),
     //   userCol = db.collection("users"),

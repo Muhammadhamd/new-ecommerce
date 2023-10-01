@@ -2,7 +2,6 @@ import express from 'express'
 import { ObjectId } from 'mongodb'
 import { client } from '../../db/mongodb.mjs'
 import multer from 'multer'
-import fs from "fs"
 import path from "path"
 const __dirname = path.resolve()
 const router = express.Router()

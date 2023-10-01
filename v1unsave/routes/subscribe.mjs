@@ -1,7 +1,5 @@
 import express from "express"
-import mongoose from "mongoose"
 import path from "path"
-import axios from "axios"
 import nodemailer from 'nodemailer';
 // import  transporter  from "./emailconfog.mjs"
 import { ObjectId } from "mongodb"

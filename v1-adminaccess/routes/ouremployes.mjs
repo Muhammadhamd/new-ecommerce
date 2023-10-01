@@ -1,6 +1,5 @@
 import admin from "firebase-admin"
 import dotenv from 'dotenv';
-import {  getStorage, ref, uploadBytes , getDownloadURL  } from "firebase/storage";
 // import deleteImageFromStorage from "./deleteImageFunction.mjs";
 import express from 'express';
 import { client } from '../../db/mongodb.mjs'

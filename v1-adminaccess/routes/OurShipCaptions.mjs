@@ -8,7 +8,6 @@ const __dirname = path.resolve()
 import fs from "fs"
 import admin from "firebase-admin"
 import dotenv from 'dotenv';
-import {  getStorage, ref, uploadBytes , getDownloadURL  } from "firebase/storage";
 // import deleteImageFromStorage from "./deleteImageFunction.mjs";
 dotenv.config(); 
 

@@ -1,12 +1,9 @@
 import express from 'express'
 import path from 'path'
 import jwt from "jsonwebtoken"
-import cookieParser from 'cookie-parser'
-import bcrypt from "bcrypt"
-const router = express.Router()
 const __dirname = path.resolve()
 const SECRET = process.env.Secret || 'topsecret'
-
+const router = express.Router()
 
 
 router.get('/admin', (req,res)=>{

@@ -30,11 +30,15 @@
         href="https://fonts.googleapis.com/css2?family=Aboreto&family=Acme&family=Inter+Tight:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:ital,wght@1,500;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@700&family=Pacifico&family=Permanent+Marker&family=Playfair+Display:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Glitch&family=Ubuntu+Condensed&family=Ubuntu:wght@500&family=Work+Sans:ital,wght@0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 
-<body onload="showLoader()"
+<div id="loadingimageoverlay">
+
+</div>
+<body 
     class="bg-[#014d53] max:[1400px]:text-[16px] min-[1450px]:text-[17px] min-[1550px]:text-[18px] min-[1650px]:text-[19px] min-[1750px]:text-[20px] min-[1650px]:text-[19px] min-[1750px]:text-[20px] min-[1850px]:text-[21px] min-[1950px]:text-[22px] min-[2050px]:text-[23px] min-[2150px]:text-[24px] min-[2250px]:text-[25px] min-[2350px]:text-[26px] min-[2450px]:text-[26px] min-[2550px]:text-[27px] min-[2650px]:text-[28px] min-[2750px]:text-[29px] min-[2850px]:text-[30px] min-[2950px]:text-[31px] min-[3050px]:text-[32px] ">
     <div class="">
 
@@ -57,45 +61,43 @@
                                 <div class="flex">
                                 <span class="w-full p-[2%] max-w-[50%] flex flex-col justify-center items-baseline"
                                     style="width: 100%; align-items: baseline;">
-                                    <a class="text-base pt-[3%]" href="/about">About US</a>
-                                    <a class="text-base pt-[3%]" href="/broker">why Use A Broker</a>
-                                    <a class="text-base pt-[3%]" href="/help">how we help</a>
-                                    <a class="text-base pt-[3%]" href="/contact">Contact US</a>
+                                    <a class="text-base pt-[3%]" href="./pages/about.html">About US</a>
+                                    <a class="text-base pt-[3%]" href="./pages/braker.html">why Use A Broker</a>
+                                    <a class="text-base pt-[3%]" href="./pages/howWeHelp.html">how we help</a>
+                                    <a class="text-base pt-[3%]" href="./pages/contact.html">Contact US</a>
             
             
                                 </span>
-                                    <span class="w-full max-w-[50%]" style="width: 100%;">
-                                        <img class="w-full h-full " style="width: 100%;"
-                                            src="./assets/images/home/ship.png" alt="">
-                                    </span>
+                                <span class="w-full max-w-[50%]" style="width: 100%;">
+                                    <img class="w-full h-full " style="width: 100%;"
+                                        src="./assets/images/home/ship.png" alt="">
+                                </span>
                                 </div>
                             </div>
                         </li>
                         <li style="--i: 2"><span>
                                 <div></div>
-                            </span> <a href="/shop">boat for sale</a></li>
+                            </span> <a href="./pages/shop.html">boat for sale</a></li>
                         <li style="--i: 3"><span>
                                 <div></div>
-                            </span> <a href="/sell-boat">Sale a boat</a></li>
+                            </span> <a href="./pages/sellpage.html">Sale a boat</a></li>
                     </ul>
                     <div class="border border-[rgb(191_168_138)] w-[35%]" style="--i: 5">
                         <!-- middle logo  -->
-                      <a href="/home">
                         <img src="assets/images/shiplogo.png" class="w-[100%]">
-                      </a>
                     </div>
                 </div>
                 <!-- large Screen menu  -->
                 <ul id="menu">
                     <li class="--i:6"><span>
                             <div></div>
-                        </span> <a href="/#" style="">Service</a>
+                        </span> <a href="../pages/services.html" style="">Service</a>
                         <div class="slide-show">
                             <span class="w-full p-[2%] max-w-[50%] flex flex-col justify-center items-baseline"
                                 style="width: 100%; align-items: baseline;">
-                                <a href="/service">Transporting
+                                <a href="../pages/services.html">Transporting
                                     And Shipping</a>
-                                <a href="/help">How we
+                                <a href="../pages/howWeHelp.html">How we
                                     help</a>
                             </span>
                             <span class="w-full max-w-[50%]" style="width: 100%;">
@@ -106,20 +108,20 @@
 
                     <li class="--i:7"><span>
                             <div></div>
-                        </span> <a href="/did-you-know" style="">Did you know?</a>
+                        </span> <a href="../pages/didyouknow.html" style="">Did you know?</a>
 
                     </li>
-                    <li style="--:8" class="text-[120%]"><span>
+                    <li style="--:8" class="text-[120%] px-4"><span>
                             <div></div>
                         </span>
-                        <a href="/wishlist"><i class="bi bi-heart"></i></a>
+                        <a href=""><i class="bi bi-heart"></i></a>
                     </li>
-                    <li style="--i:9" class="text-[130%] mr-4"><span>
+                    <!-- <li style="--i:9" class="text-[130%] mr-4"><span>
                             <div></div>
                         </span>
                         <a href=""><i class="bi bi-basket2"></i></a>
-                    </li>
-                    <button href="/login" class="btn" id="loginbtn" style="--i:10">Login</button>
+                    </li> -->
+                    <a href="./pages/login.html" class="btn" id="loginbtn" style="--i:10">Login</a>
                 </ul>
 
                 <!-- drop down components  -->
@@ -129,23 +131,23 @@
                     </div>
                     <div class="drop_down">
                         <li><a href="./">Home</a></li>
-                        <li><a href="/about">Dealer info</a></li>
-                        <li><a href="/shop">boat for sale</a></li>
-                        <li><a href="/sell-boat">Sale a boat</a></li>
+                        <li><a href="../pages/about.html">Dealer info</a></li>
+                        <li><a href="../pages/shop.html">boat for sale</a></li>
+                        <li><a href="../pages/sellpage.html">Sale a boat</a></li>
 
-                        <li><a href="/service">Service</a></li>
-                        <li><a href="/did-you-know">Did you know?</a></li>
+                        <li><a href="../pages/services.html">Service</a></li>
+                        <li><a href="../pages/didyouknow.html">Did you know?</a></li>
                         <li>
-                            <a href="/wishlist"><i class="bi bi-heart"></i></a>
+                            <a href=""><i class="bi bi-heart"></i></a>
                         </li>
                         <li>
                             <a href="#"><i class="bi bi-trash"></i></a>
                         </li>
                         <li>
-                           <a href="/login"> <button class="btn" id="loginbtn">Login</button></a>
+                            <button class="btn" id="loginbtn">Login</button>
                         </li>
                     </div>
-                    <button class="btn">Login</button>
+                    <button href="./pages/login.html" class="btn">Login</button>
                 </div>
             </nav>
 
@@ -211,7 +213,7 @@
                         ut
                         labore et dolore magna aliquyam.</h3>
                 </div>
-                <div class="flex flex-wrap gap-[40px] justify-center mt-5" data-aos="fade-up">
+                <div class="flex flex-wrap gap-[40px] justify-center mt-5" data-aos="fade-up" id="featurepost-1">
 
                     <div style="font-family: 'Urbanist';"
                         class="featured-yacht-div relative sm:min-w-[360px] w-[26%] max-[600px]:w-[95%] border text-[#E8E8E8]">
@@ -359,7 +361,7 @@
                         labore et dolore magna aliquyam.</h3>
                 </div>
                 <div class="mb-[4%]">
-                    <div class="flex flex-wrap gap-[40px] justify-center  mt-5 mb-[3%]" data-aos="fade-up">
+                    <div class="flex flex-wrap gap-[40px] justify-center  mt-5 mb-[3%]" data-aos="fade-up" id="featurepost-2">
                         <div style="font-family: 'Urbanist';"
                             class="sm:min-w-[260px] w-[21%] relative  max-[600px]:w-[95%] border text-[#E8E8E8]">
                             <div class="for-sale-box bg-[#ffffff] top-[20px] right-[20px] px-[12px] py-[3px] rounded absolute "><p class="capitalize ">For sale</p></div>
@@ -577,8 +579,8 @@
 
 
 
-            <div class=" overflow-hidden w-full text-white relative featured-yacht-long  px-[5%] pt-[3%] pb-[11%] "
-                style="background-image:linear-gradient(   #014d53, #9a030000 35%), url('./assets/images/bg-3.jpg'); background-size: cover;">
+            <div class=" overflow-hidden w-full text-white relative featured-yacht-long  px-[5%] pt-[3%] pb-[1%] "
+                style="background-image:linear-gradient(   #014d53, #9a030000 35%), url('./assets/images/bg-3.jpg'); background-size: 100% 85%;     background-repeat: no-repeat;">
                 <div class="w-full flex justify-start mb-[5%]" data-aos="slide-left">
                     <div class="md:max-w-[37.1%]">
                         <div>
@@ -720,7 +722,7 @@
              
                 <div  class="" >
 
-                <div class="owl-carousel owl-theme fpnt-bold m-auto flex mt-[2%] pb-[4%] sm:pb[0%] flex-wrap gap-[25px]     justify-center max-w-[90%]" id="owl2">
+                <div class="owl-carousel owl-theme font-bold m-auto flex mt-[2%] pb-[4%] sm:pb[0%] flex-wrap gap-[25px]     justify-center max-w-[90%]" id="owl2">
                     <div style="font-family: Urbanist;"
                         class="flex test items-center text-white w-full   m-auto "
                         style="font-family: Urbanist;">
@@ -764,16 +766,16 @@
                     <div style="font-family: Urbanist;"
                         class="flex test items-center text-white w-full   m-auto "
                         style="font-family: Urbanist;">
-                        <div data-aos="flip-left" class="test-div test-inner-div max-w-[100%] m-auto w-full md:min-w-[390px] shadow p-6"
+                        <div data-aos="flip-left" class="test-div max-w-[100%] m-auto w-full md:min-w-[390px] shadow p-6"
                             >
-                            <div class="border-2 border-[#013f44]">
+                            <div class="border-2 test-inner-div border-[#013f44]">
                                 <div class="flex  sm:flex-row flex-col ">
                                     <div class="w-[65%] md:w-[15%]">
                                         <img class="w-3/6" src="./assets/images/home/avatar-1.jpg" alt="">
                                     </div>
                                     <h1 class="mt-[20px] ml-[5px] md:text-sm text-xl">Frank Lynch</h1>
                                 </div>
-                                <p class="md:text-lg text-base m-2 font-[100] ">Lorem, ipsum dolor sit amet consectetur
+                                <p class="md:text-lg text-base  m-2 font-[100] ">Lorem, ipsum dolor sit amet consectetur
                                     adipisicing elit.
                                     Quis iste voluptatum, architecto repudiandae nemo alias!</p>
 
@@ -781,6 +783,7 @@
                             </div>
                         </div>
                     </div>
+                  
                     
                 </div>
 
@@ -931,8 +934,8 @@
                                 class="flex max-w-[80%] w-full justify-center mt-2 overflow-hidden rounded">
                                 <input type="email" name="" placeholder="Enter Email.." id="subscribe-email"
                                     class="outline-none border px-[2%] py-[.5%] max-w-[90%] w-full">
-                                <input type="submit" value="Subscribe" id=""
-                                    class=" font-semibold bg-[#Bfa888] px-[4%] py-[3%]">
+                                <input type="submit" value="Subscribe"
+                                    class="text-white font-semibold bg-[#Bfa888] px-[4%] py-[3%]">
                             </div>
                         </form>
                     </div>
@@ -1065,37 +1068,20 @@
                         </div>
 
                     </div>
+  
                 </footer>
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.js"></script>
 
-                <script src="./assets/js/popupmessageshow.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
             <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
             <script src="./assets/js/custom.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.js"></script>
-           
-           <script type="text/javascript">
-                function showLoader(){
-          $.LoadingOverlay("show",{
-            background  : "#e5e7eb",
-            image       : "../assets/images/logo.png",
-            progress    : true,
-            fontawesome : "fa fa-cog fa-spin",
-            text        : "Yacht Master INC.",
-            textAnimation  : "pulse"
-          });
-
-// Hide it after 3 seconds
-setTimeout(function(){
-    $.LoadingOverlay("hide");
-}, 4500);
-}
-
-
-
-document.getElementById("visite-req-form").addEventListener("submit",async(e)=>{
+<script src="./assets/js/popupmessageshow.js"></script>
+  <script>
+    document.getElementById("visite-req-form").addEventListener("submit",async(e)=>{
 e.preventDefault()
+try {
     await axios.post("/request-visite",{
         message:document.getElementById("visite-message").value,
     date:document.getElementById("visite-date").value,
@@ -1108,11 +1094,17 @@ e.preventDefault()
    .catch((e)=>{console.log(e)
             PopUpMessage(e.response.data)
 })
+
+} catch (error) {
+    PopUpMessage(error.response.data)
+    
+}
 })
 
 document.getElementById("subscribe-form").addEventListener("submit",async(e)=>{
-    console.log(document.getElementById("subscribe-email").value)
 e.preventDefault()
+console.log(document.getElementById("subscribe-email").value)
+
      axios.post("/subscribe",{
         email:document.getElementById("subscribe-email").value
    
@@ -1127,8 +1119,159 @@ e.preventDefault()
 })
 })
 
-            </script>
-  
+
+document.addEventListener("DOMContentLoaded",async(e)=>{
+
+    try {
+       const res=  await axios.get(`/posts`)
+    .then((res)=>{
+        console.log(res)
+        let data = res.data
+            let postaray = ''
+       
+
+
+        for (let i = 0; i < 3 ;i++) {
+            postaray += `
+            <div style="font-family: 'Urbanist';"
+                        class="featured-yacht-div relative sm:min-w-[360px] w-[26%] max-[600px]:w-[95%] border text-[#E8E8E8]">
+                        <div class="for-sale-box bg-[#ffffff] top-[20px] right-[20px] px-[12px] py-[3px] rounded absolute "><p class="capitalize ">For sale</p></div>
+                        <div class="  border-b-2">
+           <a href="/post/${data[i]._id}">
+
+                            <div class="m-2">
+                                <img src="${data[i].boatimage}" alt="" class="w-full">
+                            </div>
+            </a>
+
+                            <h1 class="text-2xl ml-2 mb-3">
+                            ${data[i].boatName}
+                            </h1>
+                            <p class="text-slate-200 text-base ml-2 mb-3">15 Guest . 12 Beds . 5 Cabins . 1 Bathrooms
+                            </p>
+                        </div>
+                        <div class="p-2 flex justify-between">
+                            <div class="flex">
+                                 ${
+                                    data[i].issale ? `
+                                    <h1 style="text-decoration: line-through;"
+                                    class="tracking-[0.05rem]  text-base ml-2 font-[100]">$${data[i].price}</h1>
+                                <h1 class="text-base ml-2 font-semibold tracking-[0.05rem]">$${data[i].totalPrice}</h1>`
+                                    : `
+                                    <h1 style="text-decoration: line-through;"
+                                    class="tracking-[0.05rem]  text-base ml-2 font-[100]"> $${data[i].price}</h1>
+                                    `
+                                }
+                              
+                            </div>
+                            <div>
+                                <h1 class="font-[100]">45 <i class="fa fa-star"></i></h1>
+                            </div>
+                        </div>
+                    </div>
+          
+                        `
+
+            
+            
+        }
+    
+    
+        document.getElementById("featurepost-1").innerHTML = postaray
+    
+    })
+
+    .catch((e)=>{
+        console.log(e)
+
+    })
+    console.log(res)
+    } catch (error) {
+    console.log(error)
+        
+    }
+})
+
+
+
+
+
+document.addEventListener("DOMContentLoaded",async(e)=>{
+
+try {
+  const res =  await axios.get(`/posts`)
+.then((res)=>{
+    console.log(res)
+    let data = res.data
+        let postaray = ''
+   
+
+
+    for (let i = 0; i < 8 ;i++) {
+        postaray += `
+        
+<div style="font-family: 'Urbanist';"
+                            class="sm:min-w-[260px] w-[21%] relative  max-[600px]:w-[95%] border text-[#E8E8E8]">
+                            <div class="for-sale-box bg-[#ffffff] top-[20px] right-[20px] px-[12px] py-[3px] rounded absolute "><p class="capitalize ">For sale</p></div>
+                            <div class="  border-b-2">
+       <a href="/post/${data[i]._id}">
+
+                                <div class="m-2">
+                                    <img src="${data[i].boatimage}" alt="" class="w-full">
+                                </div>
+        </a>
+
+                                <h1 class="text-base ml-2 mb-3 font-semibold">
+                                    ${data[i].boatName}
+                                </h1>
+                                <p class="text-slate-200 text-sm ml-2 mb-2 ">15 Guest . 12 Beds . 5 Cabins . 1 Bathrooms
+                                </p>
+                            </div>
+                            <div class="p-2 flex justify-between">
+                                <div class="flex">
+                                    
+                                 ${
+                                    data[i].issale ? `
+                                    <h1 style="text-decoration: line-through;"
+                                    class="tracking-[0.05rem]  text-base ml-2 font-[100]">$${data[i].price}</h1>
+                                <h1 class="text-base ml-2 font-semibold tracking-[0.05rem]">$${data[i].totalPrice}</h1>`
+                                    : `
+                                    <h1 style="text-decoration: line-through;"
+                                    class="tracking-[0.05rem]  text-base ml-2 font-[100]">$${data[i].price}</h1>
+                                    `
+                                }
+                                </div>
+                                <div>
+                                    <h1 class="font-[100]">45 <i class="fa fa-star"></i></h1>
+                                </div>
+                            </div>
+                        </div>
+
+ 
+      
+                    `
+
+        
+        
+    }
+document.getElementById("featurepost-2").innerHTML = postaray
+
+})
+
+.catch((e)=>{
+    console.log(e)
+
+})
+
+console.log(res)
+} catch (error) {
+    console.log(error)
+}
+})
+
+
+
+ </script>
 </body>
 
 </html>

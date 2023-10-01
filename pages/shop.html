@@ -226,68 +226,9 @@
                             </select>
                         </div>
                     </div>
-                        <div class="flex sm:flex-row flex-col    w-full gap-[20px] justify-center mt-5" id="product-result-div">
+                        <div class="flex flex-wrap    w-full gap-[20px] justify-center mt-5" id="product-result-div">
                       
-                        <div style="font-family: 'Urbanist';" class="sm:min-w-[200px] sm:max-w-[17%] sm:m-[0]  w-[90%] border" data-aos="fade-up">
-                            <div class=" border-b">
-                                <div class="m-1">
-                                    <img class="w-full" src="../assets/images/shoppage/product-1.png" alt="">
-                                </div>
-                                <h1 class="text-base ml-1 mb-2">
-                                    North Castle Product Name
-                                </h1>
-                                <p class="text-slate-200 text-[15px] ml-2 mb-3">15 Guest . 12 Beds . 5 Cabins . 1 Bathrooms</p>
-                            </div>
-                            <div class="flex">
-                                <h1 style="text-decoration: line-through;" class="tracking-[0.05rem]  text-base ml-2 font-[100]">$7,000,00</h1>
-                                <h1 class="text-base ml-1 font-semibold tracking-[0.05rem]">$6,000,00</h1>
-                            </div>
-                        </div>
-                        <div style="font-family: 'Urbanist';" class="sm:min-w-[200px] sm:max-w-[17%] sm:m-[0]  w-[90%] border" data-aos="fade-up">
-                            <div class=" border-b">
-                                <div class="m-1">
-                                    <img class="w-full" src="../assets/images/shoppage/product-2.png" alt="">
-                                </div>
-                                <h1 class="text-base ml-1 mb-2">
-                                    North Castle Product Name
-                                </h1>
-                                <p class="text-slate-200 text-[15px] ml-2 mb-3">15 Guest . 12 Beds . 5 Cabins . 1 Bathrooms</p>
-                            </div>
-                            <div class="flex">
-                                <h1 style="text-decoration: line-through;" class="tracking-[0.05rem]  text-base ml-2 font-[100]">$7,000,00</h1>
-                                <h1 class="text-base ml-1 font-semibold tracking-[0.05rem]">$6,000,00</h1>
-                            </div>
-                        </div>
-                        <div style="font-family: 'Urbanist';" class="sm:min-w-[200px] sm:max-w-[17%] sm:m-[0]  w-[90%] border" data-aos="fade-up">
-                            <div class=" border-b">
-                                <div class="m-1">
-                                    <img class="w-full" src="../assets/images/shoppage/product-3.png" alt="">
-                                </div>
-                                <h1 class="text-base ml-1 mb-2">
-                                    North Castle Product Name
-                                </h1>
-                                <p class="text-slate-200 text-[15px] ml-2 mb-3">15 Guest . 12 Beds . 5 Cabins . 1 Bathrooms</p>
-                            </div>
-                            <div class="flex">
-                                <h1 style="text-decoration: line-through;" class="tracking-[0.05rem]  text-base ml-2 font-[100]">$7,000,00</h1>
-                                <h1 class="text-base ml-1 font-semibold tracking-[0.05rem]">$6,000,00</h1>
-                            </div>
-                        </div>
-                        <div style="font-family: 'Urbanist';" class="sm:min-w-[200px] sm:max-w-[17%] sm:m-[0]  w-[90%] border" data-aos="fade-up">
-                            <div class=" border-b">
-                                <div class="m-1">
-                                    <img class="w-full" src="../assets/images/shoppage/product-2.png" alt="">
-                                </div>
-                                <h1 class="text-base ml-1 mb-2">
-                                    North Castle Product Name
-                                </h1>
-                                <p class="text-slate-200 text-[15px] ml-2 mb-3">15 Guest . 12 Beds . 5 Cabins . 1 Bathrooms</p>
-                            </div>
-                            <div class="flex">
-                                <h1 style="text-decoration: line-through;" class="tracking-[0.05rem]  text-base ml-2 font-[100]">$7,000,00</h1>
-                                <h1 class="text-base ml-1 font-semibold tracking-[0.05rem]">$6,000,00</h1>
-                            </div>
-                        </div>
+                       Loading........
                         </div>
                         
                     <div class="flex justify-center text-slate-500 my-4" data-aos="fade-left"><a href="" class="text-white">See more</a></div>   
@@ -477,8 +418,8 @@ document.getElementById("searchQuerry").addEventListener("submit", (e) => {
             let postaray = ''
         data.map((each)=>{
            postaray += `
-           <a href="/post/${each._id}">
-            <div style="font-family: 'Urbanist';" class="sm:min-w-[200px] sm:max-w-[17%] sm:m-[0]  w-[90%] border" data-aos="fade-up">
+           <a href="/post/${each._id}"    class="sm:min-w-[200px] sm:max-w-[17%] sm:m-[0]  w-[90%]">
+            <div style="font-family: 'Urbanist';" class="sm:min-w-[200px] sm:max-w-[17%] sm:m-[0]  w-[100%] border" data-aos="fade-up">
                             <div class=" border-b">
                                 <div class="m-1">
                                     <img class="w-full" src="${each.boatimage}" alt="">
@@ -535,8 +476,8 @@ if (searchValue) {
             let postaray = ''
         data.map((each)=>{
            postaray += `
-           <a href="/post/${each._id}">
-            <div style="font-family: 'Urbanist';" class="sm:min-w-[200px] sm:max-w-[17%] sm:m-[0]  w-[90%] border" data-aos="fade-up">
+           <a href="/post/${each._id}"    class="sm:min-w-[200px] sm:max-w-[17%] sm:m-[0]  w-[90%]">
+            <div style="font-family: 'Urbanist';" class="sm:min-w-[200px] sm:max-w-[17%] sm:m-[0]  w-full border" data-aos="fade-up">
                             <div class=" border-b">
                                 <div class="m-1">
                                     <img class="w-full" src="${each.boatimage}" alt="">
@@ -579,8 +520,8 @@ if (searchValue) {
             let postaray = ''
         data.map((each)=>{
            postaray += `
-           <a href="/post/${each._id}">
-            <div style="font-family: 'Urbanist';" class="sm:min-w-[200px] sm:max-w-[17%] sm:m-[0]  w-[90%] border" data-aos="fade-up">
+           <a href="/post/${each._id}"    class="sm:min-w-[200px] sm:max-w-[17%] sm:m-[0]  w-[90%]">
+            <div style="font-family: 'Urbanist';" class="sm:min-w-[200px] sm:max-w-[17%] sm:m-[0]  w-[100%] border" data-aos="fade-up">
                             <div class=" border-b">
                                 <div class="m-1">
                                     <img class="w-full" src="${each.boatimage}" alt="">

@@ -31,9 +31,11 @@
       rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
+<div id="loadingimageoverlay">
 
+</div>
 
-<body onload="showLoader()"
+<body 
   class="bg-[#014d53] max:[600px]:text-[12px] max:[1400px]:text-[16px] min-[1450px]:text-[17px] min-[1550px]:text-[18px] min-[1650px]:text-[19px] min-[1750px]:text-[20px] min-[1650px]:text-[19px] min-[1750px]:text-[20px] min-[1850px]:text-[21px] min-[1950px]:text-[22px] min-[2050px]:text-[23px] min-[2150px]:text-[24px] min-[2250px]:text-[25px] min-[2350px]:text-[26px] min-[2450px]:text-[26px] min-[2550px]:text-[27px] min-[2650px]:text-[28px] min-[2750px]:text-[29px] min-[2850px]:text-[30px] min-[2950px]:text-[31px] min-[3050px]:text-[32px] ">
   <div>
     <div class=" text-white "style="background-image:linear-gradient( 360deg , #014d53, #9a030000 15%)  , url('../assets/images/inner-bg.jpg'); background-size:cover; background-repeat: no-repeat;">
@@ -43,19 +45,19 @@
             <ul>
                 <li class="font-semibold" style="--i: 1"><span>
                         <div></div>
-                    </span> <a href=/home">Home</a>
+                    </span> <a href="../home.html">Home</a>
     
                 </li>
                 <li><span>
                         <div></div>
-                    </span> <a href="/contact">Dealer info</a>
+                    </span> <a href="../pages/contact.html">Dealer info</a>
                     <div class="slide-show">
                         <span class="w-full p-[2%] max-w-[50%] flex flex-col justify-center items-baseline"
                             style="width: 100%; align-items: baseline;">
-                            <a class="text-base pt-[3%]" href="/about">About US</a>
-                            <a class="text-base pt-[3%]" href="/broker">why Use A Broker</a>
-                            <a class="text-base pt-[3%]" href="/howWeHelp">how we help</a>
-                            <a class="text-base pt-[3%]" href="/contact">Contact US</a>
+                            <a class="text-base pt-[3%]" href="../pages/about.html">About US</a>
+                            <a class="text-base pt-[3%]" href="../pages/braker.html">why Use A Broker</a>
+                            <a class="text-base pt-[3%]" href="../pages/howWeHelp.html">how we help</a>
+                            <a class="text-base pt-[3%]" href="../pages/contact.html">Contact US</a>
     
     
                         </span>
@@ -67,10 +69,10 @@
                 </li>
                 <li style="--i: 2"><span>
                         <div></div>
-                    </span> <a href="/shop">boat for sale</a></li>
+                    </span> <a href="../pages/shop.html">boat for sale</a></li>
                 <li style="--i: 3"><span>
                         <div></div>
-                    </span> <a href="/sell-boat">Sale a boat</a></li>
+                    </span> <a href="../pages/sellpage.html">Sale a boat</a></li>
             </ul>
             <div class="border border-[rgb(191_168_138)] w-[35%]" style="--i: 5">
                 <!-- middle logo  -->
@@ -81,13 +83,13 @@
         <ul id="menu">
             <li class="--i:6"><span>
                     <div></div>
-                </span> <a href="/services" style="">Service</a>
+                </span> <a href="../pages/services.html" style="">Service</a>
                 <div class="slide-show">
                     <span class="w-full p-[2%] max-w-[50%] flex flex-col justify-center items-baseline"
                         style="width: 100%; align-items: baseline;">
-                        <a href="/service">Transporting
+                        <a href="../pages/services.html">Transporting
                             And Shipping</a>
-                        <a href="/help">How we
+                        <a href="../pages/howWeHelp.html">How we
                             help</a>
                     </span>
                     <span class="w-full max-w-[50%]" style="width: 100%;">
@@ -98,20 +100,20 @@
     
             <li class="--i:7"><span>
                     <div></div>
-                </span> <a href="/did-you-know" style="">Did you know?</a>
+                </span> <a href="../pages/didyouknow.html" style="">Did you know?</a>
     
             </li>
-            <li style="--:8" class="text-[120%]"><span>
+            <li style="--:8" class="text-[120%] px-4"><span>
                     <div></div>
                 </span>
-                <a href="/wishlist"><i class="bi bi-heart"></i></a>
+                <a href=""><i class="bi bi-heart"></i></a>
             </li>
-            <li style="--i:9" class="text-[130%] mr-4"><span>
+            <!-- <li style="--i:9" class="text-[130%] mr-4"><span>
                     <div></div>
                 </span>
                 <a href=""><i class="bi bi-basket2"></i></a>
-            </li>
-            <a  href="/login"><button class="btn" id="loginbtn" style="--i:10">Login</button></a>
+            </li> -->
+            <button href="../pages/login.html" class="btn" id="loginbtn" style="--i:10">Login</button>
         </ul>
     
         <!-- drop down components  -->
@@ -421,21 +423,6 @@
   <script src="../assets/js/custom.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
   <script type="text/javascript">
-      function showLoader(){
-$.LoadingOverlay("show",{
-  background  : "#e5e7eb",
-  image       : "../assets/images/logo.png",
-  progress    : true,
-  fontawesome : "fa fa-cog fa-spin",
-  text        : "Yacht Master INC.",
-  textAnimation  : "pulse"
-});
-
-// Hide it after 3 seconds
-setTimeout(function(){
-$.LoadingOverlay("hide");
-}, 4500);
-}
   </script>
 </body>
 

@@ -190,7 +190,7 @@
        </div>
        <div class="product-btns py-5">
           <a class="text-white capitalize px-12 py-2 rounded  bg-[#BFA888] text-white">buy now</a>
-          <a class="text-black capitalize px-12 py-2 mx-3 rounded bg-white color-[#014D53]">get a quote</a>
+          <button class="text-black capitalize px-12 py-2 mx-3 rounded bg-white color-[#014D53]" id="get a quote">get a quote</button>
        </div>
      </div>
      <div  class="product-details-right-col w-[100%] sm:w-[30%]"data-aos="slide-right" >
@@ -688,7 +688,10 @@ console.log(res)
 }
 })
 
+document.getElementById('getaquote').addEventListener("click",()=>{
 
+    PopUpMessage("request for quote saved")
+})
 </script>
 </body>
 

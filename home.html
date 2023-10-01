@@ -1082,7 +1082,7 @@
     document.getElementById("visite-req-form").addEventListener("submit",async(e)=>{
 e.preventDefault()
 try {
-    await axios.post("/request-visite",{
+    await axios.post("api/v1/request-visite",{
         message:document.getElementById("visite-message").value,
     date:document.getElementById("visite-date").value,
     time:document.getElementById("visite-time").value

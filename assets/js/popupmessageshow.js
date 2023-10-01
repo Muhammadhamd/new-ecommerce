@@ -12,7 +12,7 @@ async function PopUpMessage(message) {
 
     // Create a div element for the pop-up message
     const PopUpmessagediv = `
-        <div class="fixed top-0  z-[100] left-[40%]  bg-white md:w-[500px] text-center w-[90%]  mt-[2%] rounded shadow p-[10px]" id="popupmessage-parent-div" style="display:block;">
+        <div class="fixed top-0  z-[100] left-[30%]  bg-white md:w-[500px] text-center w-[90%]  mt-[2%] rounded shadow p-[10px]" id="popupmessage-parent-div" style="display:block;">
             <h1 class="font-semibold text-black">${message}</h1>
         </div>
     `;

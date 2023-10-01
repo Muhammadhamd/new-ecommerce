@@ -561,29 +561,29 @@ if (searchValue) {
 
 document.getElementById("priceRangeSubmit").addEventListener("submit",(e)=>{
     e.preventDefault()
-    const priceRangeTo = document.getElementById("priceRangeTo").value;
-    const priceRangeFrom = document.getElementById("priceRangeFrom").value;
+    // const priceRangeTo = document.getElementById("priceRangeTo").value;
+    // const priceRangeFrom = document.getElementById("priceRangeFrom").value;
 
-    // Get the current URL
-    const currentURL = window.location.href;
+    // // Get the current URL
+    // const currentURL = window.location.href;
 
-    // Check if there are existing query parameters in the URL
-    const isExistingQueryParams = currentURL.includes('?');
+    // // Check if there are existing query parameters in the URL
+    // const isExistingQueryParams = currentURL.includes('?');
 
-    // Construct the query string with proper syntax
-    let priceRange = isExistingQueryParams
-        ? `&priceTO=${priceRangeTo}&pricefrom=${priceRangeFrom}`
-        : `?priceTO=${priceRangeTo}&pricefrom=${priceRangeFrom}`;
+    // // Construct the query string with proper syntax
+    // let priceRange = isExistingQueryParams
+    //     ? `&priceTO=${priceRangeTo}&pricefrom=${priceRangeFrom}`
+    //     : `?priceTO=${priceRangeTo}&pricefrom=${priceRangeFrom}`;
 
-    // If the priceRange parameter already exists, replace the existing one
-    if (currentURL.includes('priceTO') && currentURL.includes('pricefrom')) {
-        const regex = /(\?|&)priceTO=\d+&pricefrom=\d+/;
-        priceRange = currentURL.replace(regex, priceRange);
-    }
+    // // If the priceRange parameter already exists, replace the existing one
+    // if (currentURL.includes('priceTO') && currentURL.includes('pricefrom')) {
+    //     const regex = /(\?|&)priceTO=\d+&pricefrom=\d+/;
+    //     priceRange = currentURL.replace(regex, priceRange);
+    // }
 
-    window.history.pushState(null, null, priceRange);
+    // window.history.pushState(null, null, priceRange);
 
-    
+    PopUpMessage("this feature is under development")
 })
 </script>
 

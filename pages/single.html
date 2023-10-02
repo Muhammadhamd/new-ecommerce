@@ -138,7 +138,7 @@
                 <a href="#"><i class="bi bi-trash"></i></a>
             </li>
             <li>
-                <button href="../index.html" class="btn" id="loginbtn">Login</button>
+                <button href="/login" class="btn" id="loginbtn">Login</button>
             </li>
         </div>
         <button href="../index.html" class="btn">Login</button>
@@ -147,7 +147,7 @@
 <div class="owl-carousel owl-theme" id="thumbnailslider">
 <div id="boatimage-preview">
  
-    <img src="../assets/images/singlepage/NoPath.png">
+    <img src="../assets/images/singlepage/NoPath.png" id="boatimage">
 </div>
 
 </div>
@@ -190,7 +190,7 @@
        </div>
        <div class="product-btns py-5">
           <a class="text-white capitalize px-12 py-2 rounded  bg-[#BFA888] text-white">buy now</a>
-          <button class="text-black capitalize px-12 py-2 mx-3 rounded bg-white color-[#014D53]" id="get a quote">get a quote</button>
+          <button class="text-black capitalize px-12 py-2 mx-3 rounded bg-white color-[#014D53]" id="getaquote">get a quote</button>
        </div>
      </div>
      <div  class="product-details-right-col w-[100%] sm:w-[30%]"data-aos="slide-right" >
@@ -503,13 +503,16 @@ axios.get(`/postdata/${postId}`)
    let reviews = data.reviews
    document.getElementById("boatName").innerHTML = data.boatName
    document.getElementById("description").innerHTML = data.description
-   document.getElementById("boatimage-preview").innerHTML = ` <img src="${data.boatimage}">`
+   document.getElementById("boatimage").src =data.boatimage
    document.getElementById("price-div").innerHTML  =`
    ${data.issale ? `<h2 class="xl:text-3xl 2xl:text-4xl text-white font-semibold">$${data.totalPrice}</h2>
         <h3 class="text-stone-50 text-2xl text-white font-semibold"> $${data.price}</h3>`
         : ` <h2 class="xl:text-3xl 2xl:text-4xl text-white font-semibold">$${data.price}</h2>`
     }`
    
+
+
+    
    let reviewdata;
    if(reviews && reviews.length > -1){
     reviews.map((review)=>{
@@ -673,7 +676,7 @@ try {
         
         
     }
-document.getElementById("relateded").innerHTML = postaray
+document.getElementById("related").innerHTML = postaray
 
 })
 

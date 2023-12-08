@@ -1,25 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .wishlist-container {
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .wishlist-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #555;
+            padding-bottom: 15px;
+        }
+
+        .wishlist-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .wishlist-item-details {
+            margin-top: 10px;
+            color: #fff;
+        }
+
+        .wishlist-item-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .wishlist-item-description {
+            margin-top: 5px;
+        }
+
+        .wishlist-item-price {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .remove-button {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .remove-button:hover {
+            background-color: #c0392b;
+        }
+    </style>
 </head>
+
 <body>
-    your wish list
- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.js"></script>
+    <div class="wishlist-container" id="wishlist-container">
+        <!-- Wishlist items will be dynamically added here -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.js"></script>
 
     <script>
 
-        document.addEventListener("DOMContentLoaded",async(e)=>{
-
-           try {
-           const res = await axios.get("/api/v1/wishlistdata")
-           console.log(res.data)
-           } catch (error) {
-            console.log(error)
-           }
+        async function renderWishList() {
+            try {
+                document.getElementById("wishlist-container").innerHTML = ''
+                const res = await axios.get("/api/v1/wishlistdata")
+                console.log(res.data)
+                res.data.map((each) => {
+                    let wishlistItem = document.createElement("div")
+                    wishlistItem.className = "wishlist-item";
+                    wishlistItem.innerHTML = `
+                        <img src="${each.boatimage}" alt="Boat Image">
+                        <div class="wishlist-item-details">
+                            <div class="wishlist-item-title">${each.boatName}</div>
+                            <div class="wishlist-item-description">${each.description}</div>
+                            <div class="wishlist-item-price">$${each.price}</div>
+                            <button class="remove-button" onclick="removeFromWishlist('${each._id}')">Remove from Wishlist</button>
+                        </div>
+                    `;
+                    document.getElementById("wishlist-container").appendChild(wishlistItem);
+                })
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        document.addEventListener("DOMContentLoaded", (e) => {
+           renderWishList()
         })
+
+        async function removeFromWishlist(itemId) {
+            // Add logic to remove item from the wishlist
+            console.log(`Removing item with ID: ${itemId}`);
+            try {
+                const res = await axios.delete(`/api/v1/remove-wishlist/${itemId}`)
+                console.log(res)
+                renderWishList()
+            } catch (error) {
+                console.log(error)
+            }
+        }
     </script>
 </body>
+
 </html>

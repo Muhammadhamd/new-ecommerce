@@ -9,7 +9,7 @@ import {client} from "../../db/mongodb.mjs"
 const db = client.db("yacht"),
       listCol = db.collection("wishlist"),
       postcol =db.collection('product')
-      router.post('/add-wishlist', async (req, res) => {
+      router.post('/api/v1/add-wishlist', async (req, res) => {
 
         if (!req?.cookies?.Token) {
           return res.status(401).send("login as a user to use this feature")
@@ -61,7 +61,7 @@ const db = client.db("yacht"),
 
 
 
-      router.get('/wishlistdata', async (req, res) => {
+      router.get('/api/v1/wishlistdata', async (req, res) => {
         if (!req?.cookies?.Token) {
           return res.status(401).send("login as a user to use this feature")
         }
@@ -78,7 +78,6 @@ const db = client.db("yacht"),
           // Extract post IDs from the wishlist
           const postIds = wishlist.wishListData.map((item) => new ObjectId(item.postId));
 
-          console.log("postsa are",postIds)
           // Query the "posts" collection to fetch post data based on post IDs
           const posts = await postcol.find({ _id: { $in: postIds } }).toArray()
 
@@ -90,7 +89,7 @@ const db = client.db("yacht"),
         }
       });
       
-      router.get("/check-post-is-in-wishlist/:id", async(req,res)=>{
+      router.get("/api/v1/check-post-is-in-wishlist/:id", async(req,res)=>{
         if (!req?.cookies?.Token) {
           return res.status(401).send("login as a user to use this feature")
         }
@@ -112,6 +111,31 @@ const db = client.db("yacht"),
           return res.status(401).send("login as a user to use this feature")
         }
         res.sendFile(path.join(__dirname,"pages/wishlist.html"))
+      })
+      router.delete(`/api/v1/remove-wishlist/:id`,async(req,res)=>{
+        const wishlistid = req.params.id
+        const userid = req?.decodedData?._id
+        const list = await listCol.findOne({userId: userid })
+
+       const match = list?.wishListData?.map((id)=> id.postId.toString() === wishlistid)
+      
+
+       try {
+        if (match) {
+        
+          listCol.updateOne(
+            {userId:userid},
+            { $pull: {"wishListData":{postId:wishlistid}} }
+          )
+
+          res.send("deleted")
+         }
+
+       } catch (error) {
+        res.status(401).send("error arha ha")
+        
+       }
+
       })
       
     export default router

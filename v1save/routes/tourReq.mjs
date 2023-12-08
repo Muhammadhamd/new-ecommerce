@@ -22,7 +22,7 @@ const db = client.db("yacht"),
        
     
 
-router.post("/request-tour", async(req,res)=>{
+router.post("/api/v1/request-tour", async(req,res)=>{
   if (!req?.cookies?.Token) {
     return res.status(401).send("login as a user to use this feature")
   }
@@ -82,7 +82,7 @@ router.post("/request-tour", async(req,res)=>{
       }
     });
 })
-router.get("/tour-requests-currentuser", async(req,res ,next)=>{
+router.get("/api/v1/tour-requests-currentuser", async(req,res ,next)=>{
   if (!req?.cookies?.Token) {
     return res.status(401).send("login as a user to use this feature")
   }

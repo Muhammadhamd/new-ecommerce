@@ -773,9 +773,12 @@
 
         async function getemail(params) {
             try {
-                const res = await axios.get("/currentemail")
+                const res = await axios.get("/api/v1/currentemail")
             console.log(res)
-            document.getElementById("existing-email-data").innerHTML = res.data.email
+            res.data.map((each)=>{
+                document.getElementById("existing-email-div").innerHTML = each.email
+
+            })
             } catch (error) {
                 console.log(error)
             }

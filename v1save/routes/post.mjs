@@ -25,7 +25,7 @@ const db = client.db("yacht"),
     },
   });
 
-router.post("/getAValution", upload.single('filename'),  async (req, res) => {
+router.post("/api/v1/getAValution", upload.single('filename'),  async (req, res) => {
   if (!req?.cookies?.Token) {
     return res.status(401).send("login as a user to use this feature")
   }
@@ -129,7 +129,7 @@ router.post("/getAValution", upload.single('filename'),  async (req, res) => {
 
 });
 
-router.get("/productsCurrentUser", async (req, res) => {
+router.get("/api/v1/productsCurrentUser", async (req, res) => {
   if (!req?.cookies?.Token) {
     return res.status(401).send("login as a user to use this feature")
   }

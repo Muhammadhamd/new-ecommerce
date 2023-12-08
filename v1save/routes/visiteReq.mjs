@@ -20,7 +20,7 @@ const db = client.db("yacht"),
        
     
 
-router.post("/request-visite", async(req,res)=>{
+router.post("/api/v1/request-visite", async(req,res)=>{
   if (!req?.cookies?.Token) {
     return res.status(401).send("login as a user to use this feature")
   }
@@ -79,7 +79,7 @@ res.status(401).send("fill all requests")
     });
 })
 
-router.get("/visit-requests-currentuser", async(req,res ,next)=>{
+router.get("/api/v1/visit-requests-currentuser", async(req,res ,next)=>{
   if (!req?.cookies?.Token) {
     return res.status(401).send("login as a user to use this feature")
   }

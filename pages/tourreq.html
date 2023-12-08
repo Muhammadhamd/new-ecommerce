@@ -24,6 +24,7 @@
         try {
             const res = await axios.get("/api/v1/tour-requests")
             let data = res.data
+            console.log(data)
 
             let div = ''
 
@@ -34,7 +35,7 @@
                     <span class="">${each.currentUser.email}</span>
                 </div>
                 <p class="mt-2">${each.currentUser.phoneNumber}</p>
-                <a href="/post/${each.Data.data.inserting_post._id}" class="font-semibold text-xl" target='_blank'>${each.Data.data.inserting_post.boatName}</a>
+                <a href="/post/${each?.Data.data?.inserting_post?._id}" class="font-semibold text-xl" target='_blank'>${each?.Data?.data?.inserting_post?.boatName}</a>
                 <p class="mt-2 text-gray-500">Requested on: ${each.timeStamp}</p>
                 <div>
                     <p class="mt-2 font-bold text-blue-600">Status: ${each.status}</p>
